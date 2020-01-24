@@ -12,8 +12,7 @@
 }
 
 body {
-    color: #111111;
-    font-size: 14px;
+    color: black;
 }
 
 body,
@@ -21,7 +20,7 @@ h1, h2, h3, h4, h5 {
     font-family: 'Tw Cen MT'!important;    
 }
 
-.demoHeaders {
+/*.demoHeaders {
     margin-top: 2em;
 }
 #dialog-link {
@@ -63,24 +62,21 @@ select {
     cursor:pointer; 
 }
 
-
 .form-content input {
     color: #000000!important;
     font-weight: bold;
 }
-
 .form-content .page-links a {
     color: #fff;
     font-weight: bold;
     text-decoration: underline;
 }
 
-
 .input-monto {
     color: #155724!important;
     font-size: 175%!important;
     font-weight: bold!important;
-}
+}*/
 
 @media (max-width: 600px) {
     .img-holder  {
@@ -102,7 +98,11 @@ select {
     }
 }
 
-
+.footer {
+  width: 100%;
+  background-color: silver;
+  padding: 10px;
+}
 
 
 

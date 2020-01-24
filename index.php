@@ -74,8 +74,8 @@ $nombreAplicacion = "APP Example";
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/magic/magic.min.css">
 
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/print.css">
+        <link rel="stylesheet" href="css/main.css"  media="screen" >
+        <link rel="stylesheet" href="css/print.css"  media="print" >
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
@@ -116,18 +116,16 @@ $nombreAplicacion = "APP Example";
 
         <main role="main">
 
-            <div class="jumbotron">
+            <div class="jumbotron wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
                 <div class="container">
                     <h1 class="display-3">Hello, world!</h1>
                     <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
                     <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
                 </div>
             </div>
-            
-            
-            <div class="text-center">
 
-                <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <div class="text-center">
+                <div class="cover-container d-flex h-100 p-3 mx-auto flex-column wow slideInLeft" data-wow-duration="2s" data-wow-delay="2s">
                     <header class="masthead mb-auto">
                         <div class="inner">
                             <h3 class="masthead-brand">Cover</h3>
@@ -155,14 +153,14 @@ $nombreAplicacion = "APP Example";
                 </div>
             </div>
 
-            <div class="container">
-                <div class="py-5 text-center">
+            <div class="container" >
+                <div class="py-5 text-center wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
                     <img class="d-block mx-auto mb-4" src="favicon/android-chrome-512x512.png" alt="" width="72" height="72">
                     <h2>Checkout form</h2>
                     <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
                 </div>
 
-                <div class="row">
+                <div class="row wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
                     <div class="col-md-4 order-md-2 mb-4">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">
                             <span class="text-muted">Your cart</span>
@@ -361,8 +359,7 @@ $nombreAplicacion = "APP Example";
                     </div>
                 </div>
 
-
-                <div class="row">
+                <div class="row wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
                     <div class="col-md-4">
                         <h2>Heading</h2>
                         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
@@ -382,8 +379,8 @@ $nombreAplicacion = "APP Example";
 
             </div>
 
-            <footer class="my-5 pt-5 text-muted text-center text-small">
-                <p class="mb-1">&copy; 2017-2018 Company Name</p>
+            <footer class="text-muted text-center text-small footer ">
+                <p class="mb-1">Cámara de Comercio de Santa Marta para el Magdalena &copy; <?= date("Y") ?></p>
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="#">Privacy</a></li>
                     <li class="list-inline-item"><a href="#">Terms</a></li>
