@@ -1,5 +1,10 @@
 {% extends "base.html.php" %}
 
+{% block logo %}
+<img src="img/logo.png" width="30" height="30" alt="">                 
+Aplicación CCSM
+{% endblock %}
+
 {% block menu %}
 <li class="nav-item active">
     <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
