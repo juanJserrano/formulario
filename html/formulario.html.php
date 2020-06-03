@@ -220,20 +220,20 @@
     </div>
 </div>
 <form id="frm-formulario" onsubmit="return false;" >
-    <input type="text" name="valor" id="valor" value="" required="" />
+    <input type="text" name="cedula" id="valor" value="" required="" />
     <button class="btn btn-primary btn-lg btn-block" type="submit" >Continue to checkout</button>
 </form>
 
 <script type="text/javascript">
     $(document).ready(function () {
         $("#frm-formulario").submit(function (e) {
-            var datos = $(this).serializeArray();
+            var datos = $(this).serialize();
             enviarDatosFormulario(datos);
         });
     });
     function enviarDatosFormulario(datos) {
         console.log(datos);
-        ejecutarOperacionSICAM('tienda-apps/tienda/probarRecibirDatos', datos, function (respuesta) {
+        ejecutarOperacionSICAM('administracion/appVisitas/autenticarColaborador/', datos, function (respuesta) {
             alert('recibido');
             alert(respuesta);
         });

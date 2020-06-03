@@ -1,22 +1,3 @@
-var _apisicam = _apisicam || {};
-_apisicam.clavePublica = 'm8mcJFLAGT5ba%2FP%2BUNITJv3jf9%2FU4zDM2DERnNFpMjGhC1xXlFAPleRAorZVikJA';
-_apisicam.clavePrivada = 'l6LHlDIvNrsuFtLDZx0ti80%2BZltejZmFVokVWczuEuU%3D';
-window.apisicam || (function (d) {
-    var s, c, o = apisicam = function () {
-        o._.push(arguments)
-    };
-    o._ = [];
-    s = d.getElementsByTagName('script')[0];
-    c = d.createElement('script');
-    c.type = 'text/javascript';
-    c.charset = 'utf-8';
-    c.async = true;
-    c.src = 'https://api.sicam32.net/clientes/javascript/index.php?' + _apisicam.clavePublica + ':' + _apisicam.clavePrivada;
-    s.parentNode.insertBefore(c, s);
-})(document);
-
-
-
 function cargarPlugins() {
     $("form").attr('onsubmit', 'return false;');
     $("form").attr('enctype', 'application/x-www-form-urlencoded');
@@ -102,13 +83,25 @@ function ejecutarOperacionSICAM(rutaOperacion, datosOperacion, functionEjecutabl
     ApiSicam.ejecutarPost(rutaOperacion, datosOperacion,
             function (respuestaHTML) {
                 console.log(respuestaHTML);
+                console.log(respuestaHTML.MENSAJE);                
+                if (typeof functionEjecutable === "function") {
+                    functionEjecutable(respuestaHTML);
+                }
+                ocultarCargando();
+            }
+    );
+}
+
+function ejecutarOperacionOcultaSICAM(rutaOperacion, datosOperacion, functionEjecutable = null) {
+    //mostrarCargando();
+    ApiSicam.ejecutarPost(rutaOperacion, datosOperacion,
+            function (respuestaHTML) {
+                console.log(respuestaHTML);
                 console.log(respuestaHTML.MENSAJE);
-                validarRespuesta(respuestaHTML, function (respuestaHTML) {
-                    if (typeof functionEjecutable === "function") {
-                        functionEjecutable(respuestaHTML);
-                    }
-                });
-                ocultarCargando()
+                if (typeof functionEjecutable === "function") {
+                    functionEjecutable(respuestaHTML);
+                }
+                //ocultarCargando();
             }
     );
 }

@@ -67,7 +67,7 @@ Aplicación CCSM
 <div id="formulario-muestra" class="container" ></div>
 {% endblock %}
 
-{% block piecera %}}
+{% block piecera %}
 <ul class = "list-inline">
     <li class = "list-inline-item"><a href = "https://www.ccsm.org.co">CamComercioSM</a></li>
     <li class = "list-inline-item"><a href = "#">Terminos y Condiciones</a></li>
