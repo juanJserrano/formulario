@@ -76,6 +76,7 @@
 
         <!-- MIS ENLACES LINK-->
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
 
     <style>
         *{
@@ -83,6 +84,8 @@
             padding:0;
             box-sizing:border-box;
             font-family: 'Roboto', sans-serif;
+            font-weight:bold;
+            text-transform: uppercase;
         }
         html,body{
             height:100%;
@@ -90,33 +93,71 @@
         body{
             display:grid;
             place-items:center;
-            background:red;
+            overflow: hidden;
+        } 
+        i{
+            color:rgba(38, 127, 255, 1);;
         }
+        .glider-contain{
+            position:relative;
+        }
+        .glider-prev,.glider-next{
+            position:absolute;
+            display:flex;
+            width:30px;
+            height:30px;
+            border:none;
+            top:calc(50% - 30px);
+            cursor:pointer;
+            line-height:30px;
+            text-align: center;
+            
+           
+            opacity:1;
+        }
+        .glider-prev{
+            left: -30px;
+        }
+        .glider-next{
+            right: -30px;
+        }
+        }.dots .glider-dot{
+            background-color:#979899;
+            opacity:.5
+        }
+        .dots .glider-dot:hover{
+            background-color:rgba(38, 127, 255, 1);
+        }
+        .dots .glider-dot.active{
+            background-color:rgba(38, 127, 255, 1);
+        }
+        
         .card{
             position:relative;
-            height:470px;
-            width:340px;
+            height:350px;
+            width:200px;
             display:block;
             background:white;
             transition:0.3s;
+            margin:15px
         }
         .card:hover{
-            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.3);
+            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.4);
         }
-        .card.active .image .img-event{
+        .card:hover .image .img-event{
             opacity:0.6;
             transform:scale(1.1)
         }
         .card .image{
             background:black;
-            height:400px;
+            height:300px;
             overflow:hidden;
             
         }
         .image .img-event{
             height:100%;
             width:100%;
-            transition:1s;
+            transition:all 1s;
         }
 
         .card .content{
@@ -125,14 +166,24 @@
             background:white;
             width: 100%;
             text-align: center;
-            padding:10px 15px; 
+            padding:15px 15px; 
+            transition:all 0.5s;
            
         }
+
+        .card:hover .content{
+            background: rgba(255, 255, 255, 0.3);
+            border-top-left-radius:30px;
+            border-top-right-radius:30px;
+        }
         .content .title{
-            font-size:24px;
+            font-size:18px;
             font-weight:600px;
-            color:#e74c3c;
-            margin-bottom:15px 
+            color:black;
+            margin-bottom:15px ;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
         }
         .bottom button{
             transition:0.3s ease;
@@ -140,8 +191,16 @@
         .bottom button:hover{
             transform:scale(0.9);
         }
-        .bottom{
-            display:none;
+        .modal-title{
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }.modal-body{
+            height:450px;
+           overflow-y: scroll;
+        }
+        .row{
+            margin-top:10px;
         }
         
     </style>
@@ -184,6 +243,9 @@
         <script src="js/main.js"></script>
 
         <!-- MIS ENLACES SCRIPT -->
+
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+        <script src="https://kit.fontawesome.com/f062c2af32.js" crossorigin="anonymous"></script>
 
         {% block js%}{% endblock %}
 

@@ -160,6 +160,7 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
 
         <!-- MIS ENLACES LINK-->
         <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
+        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css\">
 
     <style>
         *{
@@ -167,6 +168,8 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
             padding:0;
             box-sizing:border-box;
             font-family: 'Roboto', sans-serif;
+            font-weight:bold;
+            text-transform: uppercase;
         }
         html,body{
             height:100%;
@@ -174,33 +177,73 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         body{
             display:grid;
             place-items:center;
-            background:red;
+            overflow: hidden;
+        } 
+        i{
+            color:rgba(38, 127, 255, 1);;
+        }
+        .glider-contain{
+            position:relative;
+        }
+        .glider-prev,.glider-next{
+            position:absolute;
+            display:flex;
+            width:30px;
+            height:30px;
+            border:none;
+            top:calc(50% - 30px);
+            cursor:pointer;
+            line-height:30px;
+            text-align: center;
+            
+           
+            opacity:1;
+        }
+        .glider-prev{
+            left: -30px;
+        }
+        .glider-next{
+            right: -30px;
+        }
+        }.dots .glider-dot{
+            background-color:#979899;
+            opacity:.5
+        }
+        .dots .glider-dot:hover{
+            background-color:rgba(38, 127, 255, 1);
+        }
+        .dots .glider-dot.active{
+            background-color:rgba(38, 127, 255, 1);
+        }
+        .lista__elementos{
+            display:flex;
+            overflow: hidden;
+            height:400px;
         }
         .card{
             position:relative;
-            height:470px;
-            width:340px;
-            display:block;
+            overflow: hidden;
             background:white;
             transition:0.3s;
+            margin:15px
         }
         .card:hover{
-            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.3);
+            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.4);
         }
-        .card.active .image .img-event{
+        .card:hover .image .img-event{
             opacity:0.6;
             transform:scale(1.1)
         }
         .card .image{
             background:black;
-            height:400px;
+            height:300px;
             overflow:hidden;
             
         }
         .image .img-event{
             height:100%;
             width:100%;
-            transition:1s;
+            transition:all 1s;
         }
 
         .card .content{
@@ -209,14 +252,24 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
             background:white;
             width: 100%;
             text-align: center;
-            padding:10px 15px; 
+            padding:15px 15px; 
+            transition:all 0.5s;
            
         }
+
+        .card:hover .content{
+            background: rgba(255, 255, 255, 0.3);
+            border-top-left-radius:30px;
+            border-top-right-radius:30px;
+        }
         .content .title{
-            font-size:24px;
+            font-size:18px;
             font-weight:600px;
-            color:#e74c3c;
-            margin-bottom:15px 
+            color:black;
+            margin-bottom:15px ;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
         }
         .bottom button{
             transition:0.3s ease;
@@ -224,8 +277,16 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         .bottom button:hover{
             transform:scale(0.9);
         }
-        .bottom{
-            display:none;
+        .modal-title{
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }.modal-body{
+            height:450px;
+           overflow-y: scroll;
+        }
+        .row{
+            margin-top:10px;
         }
         
     </style>
@@ -235,27 +296,27 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
             <a class=\"navbar-brand\" href=\"/\">
                 ";
-        // line 153
+        // line 214
         $this->displayBlock('logo', $context, $blocks);
-        // line 154
+        // line 215
         echo "            </a>
         </nav>
 
       
             ";
-        // line 158
+        // line 219
         $this->displayBlock('contenido', $context, $blocks);
-        // line 159
+        // line 220
         echo "       
         <footer class=\"text-muted text-center text-small footer \">
             <p class=\"mb-1\">Cámara de Comercio de Santa Marta para el Magdalena &copy; ";
-        // line 161
+        // line 222
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "</p>
             ";
-        // line 162
+        // line 223
         $this->displayBlock('piecera', $context, $blocks);
-        // line 163
+        // line 224
         echo "        </footer>
 
         <div class = \"loader no-print\" style = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);\" >
@@ -281,10 +342,13 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
 
         <!-- MIS ENLACES SCRIPT -->
 
+        <script src=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js\"></script>
+        <script src=\"https://kit.fontawesome.com/f062c2af32.js\" crossorigin=\"anonymous\"></script>
+
         ";
-        // line 188
+        // line 252
         $this->displayBlock('js', $context, $blocks);
-        // line 189
+        // line 253
         echo "
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -320,25 +384,25 @@ gtag('config', 'G-ZBTLK22S7Q');
         $macros = $this->macros;
     }
 
-    // line 153
+    // line 214
     public function block_logo($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 158
+    // line 219
     public function block_contenido($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 162
+    // line 223
     public function block_piecera($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 188
+    // line 252
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -356,7 +420,7 @@ gtag('config', 'G-ZBTLK22S7Q');
 
     public function getDebugInfo()
     {
-        return array (  342 => 188,  336 => 162,  330 => 158,  324 => 153,  318 => 72,  312 => 39,  288 => 189,  286 => 188,  259 => 163,  257 => 162,  253 => 161,  249 => 159,  247 => 158,  241 => 154,  239 => 153,  157 => 73,  155 => 72,  138 => 58,  134 => 57,  130 => 56,  126 => 55,  119 => 51,  115 => 50,  111 => 49,  107 => 48,  98 => 42,  94 => 41,  90 => 40,  83 => 39,  43 => 1,);
+        return array (  406 => 252,  400 => 223,  394 => 219,  388 => 214,  382 => 72,  376 => 39,  352 => 253,  350 => 252,  320 => 224,  318 => 223,  314 => 222,  310 => 220,  308 => 219,  302 => 215,  300 => 214,  157 => 73,  155 => 72,  138 => 58,  134 => 57,  130 => 56,  126 => 55,  119 => 51,  115 => 50,  111 => 49,  107 => 48,  98 => 42,  94 => 41,  90 => 40,  83 => 39,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -439,6 +503,7 @@ gtag('config', 'G-ZBTLK22S7Q');
 
         <!-- MIS ENLACES LINK-->
         <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
+        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css\">
 
     <style>
         *{
@@ -446,6 +511,8 @@ gtag('config', 'G-ZBTLK22S7Q');
             padding:0;
             box-sizing:border-box;
             font-family: 'Roboto', sans-serif;
+            font-weight:bold;
+            text-transform: uppercase;
         }
         html,body{
             height:100%;
@@ -453,33 +520,73 @@ gtag('config', 'G-ZBTLK22S7Q');
         body{
             display:grid;
             place-items:center;
-            background:red;
+            overflow: hidden;
+        } 
+        i{
+            color:rgba(38, 127, 255, 1);;
+        }
+        .glider-contain{
+            position:relative;
+        }
+        .glider-prev,.glider-next{
+            position:absolute;
+            display:flex;
+            width:30px;
+            height:30px;
+            border:none;
+            top:calc(50% - 30px);
+            cursor:pointer;
+            line-height:30px;
+            text-align: center;
+            
+           
+            opacity:1;
+        }
+        .glider-prev{
+            left: -30px;
+        }
+        .glider-next{
+            right: -30px;
+        }
+        }.dots .glider-dot{
+            background-color:#979899;
+            opacity:.5
+        }
+        .dots .glider-dot:hover{
+            background-color:rgba(38, 127, 255, 1);
+        }
+        .dots .glider-dot.active{
+            background-color:rgba(38, 127, 255, 1);
+        }
+        .lista__elementos{
+            display:flex;
+            overflow: hidden;
+            height:400px;
         }
         .card{
             position:relative;
-            height:470px;
-            width:340px;
-            display:block;
+            overflow: hidden;
             background:white;
             transition:0.3s;
+            margin:15px
         }
         .card:hover{
-            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.3);
+            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.4);
         }
-        .card.active .image .img-event{
+        .card:hover .image .img-event{
             opacity:0.6;
             transform:scale(1.1)
         }
         .card .image{
             background:black;
-            height:400px;
+            height:300px;
             overflow:hidden;
             
         }
         .image .img-event{
             height:100%;
             width:100%;
-            transition:1s;
+            transition:all 1s;
         }
 
         .card .content{
@@ -488,14 +595,24 @@ gtag('config', 'G-ZBTLK22S7Q');
             background:white;
             width: 100%;
             text-align: center;
-            padding:10px 15px; 
+            padding:15px 15px; 
+            transition:all 0.5s;
            
         }
+
+        .card:hover .content{
+            background: rgba(255, 255, 255, 0.3);
+            border-top-left-radius:30px;
+            border-top-right-radius:30px;
+        }
         .content .title{
-            font-size:24px;
+            font-size:18px;
             font-weight:600px;
-            color:#e74c3c;
-            margin-bottom:15px 
+            color:black;
+            margin-bottom:15px ;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
         }
         .bottom button{
             transition:0.3s ease;
@@ -503,8 +620,16 @@ gtag('config', 'G-ZBTLK22S7Q');
         .bottom button:hover{
             transform:scale(0.9);
         }
-        .bottom{
-            display:none;
+        .modal-title{
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }.modal-body{
+            height:450px;
+           overflow-y: scroll;
+        }
+        .row{
+            margin-top:10px;
         }
         
     </style>
@@ -547,6 +672,9 @@ gtag('config', 'G-ZBTLK22S7Q');
         <script src=\"js/main.js\"></script>
 
         <!-- MIS ENLACES SCRIPT -->
+
+        <script src=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js\"></script>
+        <script src=\"https://kit.fontawesome.com/f062c2af32.js\" crossorigin=\"anonymous\"></script>
 
         {% block js%}{% endblock %}
 
