@@ -173,9 +173,11 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         font-family: 'Roboto', sans-serif;
     }
     body{
-
-    }h1{
+        overflow: hidden;
+    }
+    h1{
         text-align: center;
+        font-family: 'Roboto', sans-serif;
     }
     p{
         font-size:20px;
@@ -184,7 +186,7 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
+    
    .carousel{
         margin-top:10%;
     }
@@ -229,7 +231,7 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
     /* card */
     .carousel__elemento{
         position: relative;
-        margin:10px;
+        margin:15px;
         overflow: hidden;
         display:block;
         text-align: center;
@@ -273,8 +275,11 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
     
     }
     .modal-body{
-        width:80%;
+        width:100%;
         overflow-y: scroll;
+    }
+    .row{
+        margin-top:15px
     } 
 </style>
 
@@ -284,16 +289,16 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
             <a class=\"navbar-brand\" href=\"/\">
                 ";
-        // line 201
+        // line 206
         $this->displayBlock('logo', $context, $blocks);
-        // line 202
+        // line 207
         echo "            </a>
             <div class=\"collapse navbar-collapse\" id=\"navbarsAplicacionCCSM\">
                 <ul class=\"navbar-nav mr-auto\">
                     ";
-        // line 205
+        // line 210
         $this->displayBlock('menu', $context, $blocks);
-        // line 206
+        // line 211
         echo "                </ul>
             </div>
         </nav>
@@ -302,19 +307,19 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
 
         <main role=\"main\">
             ";
-        // line 213
+        // line 218
         $this->displayBlock('contenido', $context, $blocks);
-        // line 214
+        // line 219
         echo "        </main>
         <!-- <footer class=\"text-muted text-center text-small footer \">
             <p class=\"mb-1\">Cámara de Comercio de Santa Marta para el Magdalena &copy; ";
-        // line 216
+        // line 221
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "</p>
             ";
-        // line 217
+        // line 222
         $this->displayBlock('piecera', $context, $blocks);
-        // line 218
+        // line 223
         echo "        </footer> -->
 
         <div class = \"loader no-print\" style = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);\" >
@@ -341,7 +346,7 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
       
     
         ";
-        // line 243
+        // line 248
         $this->displayBlock('js', $context, $blocks);
         echo " 
     
@@ -379,31 +384,31 @@ gtag('config', 'G-ZBTLK22S7Q');
         $macros = $this->macros;
     }
 
-    // line 201
+    // line 206
     public function block_logo($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 205
+    // line 210
     public function block_menu($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 213
+    // line 218
     public function block_contenido($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 217
+    // line 222
     public function block_piecera($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 243
+    // line 248
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -421,7 +426,7 @@ gtag('config', 'G-ZBTLK22S7Q');
 
     public function getDebugInfo()
     {
-        return array (  407 => 243,  401 => 217,  395 => 213,  389 => 205,  383 => 201,  377 => 82,  371 => 39,  345 => 243,  318 => 218,  316 => 217,  312 => 216,  308 => 214,  306 => 213,  297 => 206,  295 => 205,  290 => 202,  288 => 201,  168 => 83,  166 => 82,  139 => 58,  135 => 57,  131 => 56,  127 => 55,  120 => 51,  116 => 50,  112 => 49,  108 => 48,  99 => 42,  95 => 41,  91 => 40,  84 => 39,  44 => 1,);
+        return array (  412 => 248,  406 => 222,  400 => 218,  394 => 210,  388 => 206,  382 => 82,  376 => 39,  350 => 248,  323 => 223,  321 => 222,  317 => 221,  313 => 219,  311 => 218,  302 => 211,  300 => 210,  295 => 207,  293 => 206,  168 => 83,  166 => 82,  139 => 58,  135 => 57,  131 => 56,  127 => 55,  120 => 51,  116 => 50,  112 => 49,  108 => 48,  99 => 42,  95 => 41,  91 => 40,  84 => 39,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -516,9 +521,11 @@ gtag('config', 'G-ZBTLK22S7Q');
         font-family: 'Roboto', sans-serif;
     }
     body{
-
-    }h1{
+        overflow: hidden;
+    }
+    h1{
         text-align: center;
+        font-family: 'Roboto', sans-serif;
     }
     p{
         font-size:20px;
@@ -527,7 +534,7 @@ gtag('config', 'G-ZBTLK22S7Q');
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
+    
    .carousel{
         margin-top:10%;
     }
@@ -572,7 +579,7 @@ gtag('config', 'G-ZBTLK22S7Q');
     /* card */
     .carousel__elemento{
         position: relative;
-        margin:10px;
+        margin:15px;
         overflow: hidden;
         display:block;
         text-align: center;
@@ -616,8 +623,11 @@ gtag('config', 'G-ZBTLK22S7Q');
     
     }
     .modal-body{
-        width:80%;
+        width:100%;
         overflow-y: scroll;
+    }
+    .row{
+        margin-top:15px
     } 
 </style>
 

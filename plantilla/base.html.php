@@ -88,9 +88,11 @@
         font-family: 'Roboto', sans-serif;
     }
     body{
-
-    }h1{
+        overflow: hidden;
+    }
+    h1{
         text-align: center;
+        font-family: 'Roboto', sans-serif;
     }
     p{
         font-size:20px;
@@ -99,7 +101,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
+    
    .carousel{
         margin-top:10%;
     }
@@ -144,7 +146,7 @@
     /* card */
     .carousel__elemento{
         position: relative;
-        margin:10px;
+        margin:15px;
         overflow: hidden;
         display:block;
         text-align: center;
@@ -188,8 +190,11 @@
     
     }
     .modal-body{
-        width:80%;
+        width:100%;
         overflow-y: scroll;
+    }
+    .row{
+        margin-top:15px
     } 
 </style>
 

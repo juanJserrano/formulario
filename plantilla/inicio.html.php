@@ -10,7 +10,7 @@
 <div class="jumbotron wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
     <div class="container">
 
-    <h1 class="animate__animated animate__pulse animate__duraction">Lista de eventos</h1>
+      <h1 class="animate__animated animate__pulse animate__duraction">Lista de eventos</h1>
         <div class="carousel">
             <div class="carousel__contenedor">
         <!-- boton anterior -->
@@ -22,61 +22,73 @@
 
                         <div class="carousel__elemento">
                             <div class="image">
-                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                             <img src="img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
                             </div>
                             <div class="contenido">   
-                                <p>%% nombreDelEvento %%</p>                            
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                                <p>%% nombreDelEvento lorem%%</p>                            
+                                <button class="btn btn-primary registro" data-toggle="modal" data-target="#staticBackdrop">
+                                    registrarme
+                                </button>
                             </div>
                         </div>
 
                         <div class="carousel__elemento">
                             <div class="image">
-                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                             <img src="img/christmas-table.jpg"   alt="Imgen del evento" class="img-evento" >
                             </div>
                             <div class="contenido">   
                                 <p>%% nombreDelEvento %%</p>                            
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                                <button class="btn btn-primary registro" data-toggle="modal" data-target="#staticBackdrop">
+                                    registrarme
+                                </button>
                             </div>
                         </div>
 
                         <div class="carousel__elemento">
                             <div class="image">
-                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                             <img src="img/exclusive-banquet.jpg"   alt="Imgen del evento" class="img-evento" >
                             </div>
                             <div class="contenido">   
                                 <p>%% nombreDelEvento %%</p>                            
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                                <button class="btn btn-primary registro" data-toggle="modal" data-target="#staticBackdrop">
+                                    registrarme
+                                </button>
                             </div>
                         </div>
 
                         <div class="carousel__elemento">
                             <div class="image">
-                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                             <img src="img/live-concert.jpg"   alt="Imgen del evento" class="img-evento" >
                             </div>
                             <div class="contenido">   
                                 <p>%% nombreDelEvento %%</p>                            
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                                <button class="btn btn-primary registro" data-toggle="modal" data-target="#staticBackdrop">
+                                    registrarme
+                                </button>
                             </div>
                         </div>
 
                         <div class="carousel__elemento">
                             <div class="image">
-                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                             <img src="img/planner.jpg"   alt="Imgen del evento" class="img-evento" >
                             </div>
                             <div class="contenido">   
                                 <p>%% nombreDelEvento %%</p>                            
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                                <button class="btn btn-primary registro" data-toggle="modal" data-target="#staticBackdrop">
+                                    registrarme
+                                </button>                            
                             </div>
                         </div>
 
                         <div class="carousel__elemento">
                             <div class="image">
-                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                             <img src="img/wedding-reception.jpg"   alt="Imgen del evento" class="img-evento" >
                             </div>
                             <div class="contenido">   
                                 <p>%% nombreDelEvento %%</p>                            
-                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                                <button class="btn btn-primary registro" data-toggle="modal" data-target="#staticBackdrop">
+                                    registrarme
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -111,7 +123,7 @@
             <form>
             <!-- IDENTIFICACION -->
                 <div class="row">
-                    <div class="col-md-6 mb-3 ml-auto">
+                    <div class="col-md-6">
                         <label for="inputTipoIdentificacion">TIPO DE IDENTIFICACION*</label>
                         <select class="custom-select" id="inputGroupSelect02">
                             <option selected>----</option>
@@ -122,7 +134,7 @@
                         </select>
                     </div>
 
-                    <div class="col-md-6 mb-3 ml-auto">
+                    <div class="col-md-6">
                         <label for="inputIdentificacion">IDENTIFICACION*</label>
                         <input type="text" class="form-control" placeholder="IDENTIFICACION">
                     </div>
@@ -130,24 +142,24 @@
 
             <!-- NOMBRE,APELLIDO-->
             <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 ">
                         <label for="inputPrimerNombre">PRIMER NOMBRE*</label>
                         <input type="text" class="form-control" placeholder="PRIMER NOMBRE">
                     </div>
 
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 ">
                         <label for="inputSegundoNombre">SEGUNDO NOMBRE*</label>
                         <input type="text" class="form-control" placeholder="SEGUNDO NOMBRE">
                     </div>
             </div>
 
             <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 ">
                         <label for="inputPrimerApellido">PRIMER APELLIDO*</label>
                         <input type="text" class="form-control" placeholder="PRIMER APELLIDO">
                     </div>
 
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6 ">
                         <label for="inputSegundoApellido">SEGUNDO APELLIDO*</label>
                         <input type="text" class="form-control" placeholder="SEGUNDO APELLIDO">
                     </div>
@@ -155,12 +167,12 @@
 
             <!-- CORREO ELTRONICO, TELEFONO -->
             <div class="row">
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6">
                         <label for="inputCorreoEletronico">CORREO ELETRONICO*</label>
                         <input type="text" class="form-control" placeholder="CORREO ELETRONICO">
                     </div>
 
-                    <div class="col-md-6 mb-3">
+                    <div class="col-md-6">
                         <label for="inputNumeroCelular">NUMERO CELULAR*</label>
                         <input type="text" class="form-control" placeholder="NUMERO CELULAR">
                     </div>
