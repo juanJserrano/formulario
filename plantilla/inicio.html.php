@@ -1,187 +1,184 @@
 {% extends "base.html.php" %}
 
-
 {% block logo %}
-<img src="img/logo.png" width="30" height="30" alt="">                 
-Aplicación CCSM
+<img src="img/logo.png" width="30" height="30" alt="" class="logo">Aplicación CCSM           
 {% endblock %}
-
-                  
-
+                 
 {% block contenido %}
 
+
+<div class="jumbotron wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
     <div class="container">
-        <div class="glider-contain">
-          <div class="glider">
-<!-- Boton de anterior -->
-          <button aria-label="Previous" class="glider-prev">
-            <i class="fas fa-chevron-circle-left"></i>
-          </button>
-            <div class="lista__elementos">
-              <div class="card">
-                  <div class="image">
-                      <img src="img/bird-feeder.jpg" alt="imagen" class="img-event"> 
-                  </div>
 
-                  <div class="content">
-                      <div class="title"> nombre del evento tattat</div>
-                      <div class="bottom">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
-                      </div>
-                  </div>
-              </div>
+    <h1 class="animate__animated animate__pulse animate__duraction">Lista de eventos</h1>
+        <div class="carousel">
+            <div class="carousel__contenedor">
+        <!-- boton anterior -->
+                <button aria-label="Anterior" class="carousel__anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            <!-- Elemento del carousel -->
+                    <div class="carousel__lista">
 
-              <div class="card">
-                  <div class="image">
-                      <img src="img/bird-feeder.jpg" alt="imagen" class="img-event"> 
-                  </div>
+                        <div class="carousel__elemento">
+                            <div class="image">
+                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                            </div>
+                            <div class="contenido">   
+                                <p>%% nombreDelEvento %%</p>                            
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                            </div>
+                        </div>
 
-                  <div class="content">
-                      <div class="title"> nombre del evento tattat</div>
-                      <div class="bottom">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
-                      </div>
-                  </div>
-              </div>
+                        <div class="carousel__elemento">
+                            <div class="image">
+                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                            </div>
+                            <div class="contenido">   
+                                <p>%% nombreDelEvento %%</p>                            
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                            </div>
+                        </div>
 
-              <div class="card">
-                  <div class="image">
-                      <img src="img/bird-feeder.jpg" alt="imagen" class="img-event"> 
-                  </div>
+                        <div class="carousel__elemento">
+                            <div class="image">
+                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                            </div>
+                            <div class="contenido">   
+                                <p>%% nombreDelEvento %%</p>                            
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                            </div>
+                        </div>
 
-                  <div class="content">
-                      <div class="title"> nombre del evento tattat</div>
-                      <div class="bottom">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
-                      </div>
-                  </div>
-              </div>
+                        <div class="carousel__elemento">
+                            <div class="image">
+                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                            </div>
+                            <div class="contenido">   
+                                <p>%% nombreDelEvento %%</p>                            
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                            </div>
+                        </div>
 
-              <div class="card">
-                  <div class="image">
-                      <img src="img/bird-feeder.jpg" alt="imagen" class="img-event"> 
-                  </div>
+                        <div class="carousel__elemento">
+                            <div class="image">
+                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                            </div>
+                            <div class="contenido">   
+                                <p>%% nombreDelEvento %%</p>                            
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                            </div>
+                        </div>
 
-                  <div class="content">
-                      <div class="title"> nombre del evento tattat</div>
-                      <div class="bottom">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
-                      </div>
-                  </div>
-              </div>
+                        <div class="carousel__elemento">
+                            <div class="image">
+                             <img src="img/img/ballon.jpg"   alt="Imgen del evento" class="img-evento" >
+                            </div>
+                            <div class="contenido">   
+                                <p>%% nombreDelEvento %%</p>                            
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
+                            </div>
+                        </div>
+                    </div>
 
-              <div class="card">
-                  <div class="image">
-                      <img src="img/bird-feeder.jpg" alt="imagen" class="img-event"> 
-                  </div>
-
-                  <div class="content">
-                      <div class="title"> nombre del evento tattat</div>
-                      <div class="bottom">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="card">
-                  <div class="image">
-                      <img src="img/bird-feeder.jpg" alt="imagen" class="img-event"> 
-                  </div>
-
-                  <div class="content">
-                      <div class="title"> nombre del evento tattat lor</div>
-                      <div class="bottom">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Registrarme</button>
-                      </div>
-                  </div>
-              </div>
+            <!-- boton siguiente -->      
+                            <button aria-label="Siguiente" class="carousel__siguiente">
+                            <i class="fas fa-chevron-right"></i>
+                            </button>
+            <!-- pagination -->    
+            <div role="tablist" class="carousel__indicadores"></div> 
             </div>
-          </div>
-<!-- Boton de siguiente -->
-          <button aria-label="Next" class="glider-next">
-            <i class="fas fa-chevron-circle-right"></i>
-          </button>
-<!-- pagination -->
-          <div role="tablist" class="dots"></div>
-    </div>
-
-    </div>    
-
-
-<!-- MODAL -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">%%nombreDelEvento%%</h5>
+        </div>
         
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
 
-      <div class="modal-body">
-      <form>
-<!-- Identificacion -->
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="tipoIdentificacion">tipo de indetificacion</label>
-            <select id="inputState" class="form-control">
-              <option selected>---</option>
-              <option>opcion 1</option>
-              <option>opcion 3</option>
-              <option>opcion 4</option>
-            </select>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="identificacion">identificacion</label>
-            <input type="number" class="form-control" placeholder="identificacion">
-          </div>
+        
+<!-- Modal -->
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+                %%Nombre del evento%%
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
         </div>
 
-<!-- Nombres -->
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="primerNombre">primer nombre</label>
-            <input type="text" class="form-control" placeholder="primer nombre">
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="segunNombre">segundo nombre</label>
-            <input type="text" class="form-control" placeholder="segundo nombre">
-          </div>
-        </div>
-<!-- Apellidos -->
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="primerApellido">primer Apellido</label>
-            <input type="text" class="form-control" placeholder="primer apellido">
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="segunApellido">segundo Apellido</label>
-            <input type="text" class="form-control" placeholder="segundo apellido">
-          </div>
-        </div>
+        <div class="modal-body">
 
-<!-- Correo y Telefono -->
-        <div class="row">
-            <div class="col-md-6 mb-3">
-              <label for="correEletronico">correo eletronico</label>
-              <input type="email" class="form-control" placeholder="correo eletronico">
+            <form>
+            <!-- IDENTIFICACION -->
+                <div class="row">
+                    <div class="col-md-6 mb-3 ml-auto">
+                        <label for="inputTipoIdentificacion">TIPO DE IDENTIFICACION*</label>
+                        <select class="custom-select" id="inputGroupSelect02">
+                            <option selected>----</option>
+                            <option value="1">OPCION 1</option>
+                            <option value="2">OPCION 2</option>
+                            <option value="3">OPCION 3</option>
+                            <option value="4">OPCION 4</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6 mb-3 ml-auto">
+                        <label for="inputIdentificacion">IDENTIFICACION*</label>
+                        <input type="text" class="form-control" placeholder="IDENTIFICACION">
+                    </div>
+                </div>
+
+            <!-- NOMBRE,APELLIDO-->
+            <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="inputPrimerNombre">PRIMER NOMBRE*</label>
+                        <input type="text" class="form-control" placeholder="PRIMER NOMBRE">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="inputSegundoNombre">SEGUNDO NOMBRE*</label>
+                        <input type="text" class="form-control" placeholder="SEGUNDO NOMBRE">
+                    </div>
             </div>
-            <div class="col-md-6 mb-3">
-              <label for="telefono">telefono</label>
-              <input type="number" class="form-control" placeholder="telefono">
+
+            <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="inputPrimerApellido">PRIMER APELLIDO*</label>
+                        <input type="text" class="form-control" placeholder="PRIMER APELLIDO">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="inputSegundoApellido">SEGUNDO APELLIDO*</label>
+                        <input type="text" class="form-control" placeholder="SEGUNDO APELLIDO">
+                    </div>
             </div>
+
+            <!-- CORREO ELTRONICO, TELEFONO -->
+            <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="inputCorreoEletronico">CORREO ELETRONICO*</label>
+                        <input type="text" class="form-control" placeholder="CORREO ELETRONICO">
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="inputNumeroCelular">NUMERO CELULAR*</label>
+                        <input type="text" class="form-control" placeholder="NUMERO CELULAR">
+                    </div>
+            </div>
+            
+            
+            </form>
         </div>
-      </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Listo</button>
-      </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Listo</button>
+        </div>
+        </div>
+
     </div>
-  </div>
+
+    
+
 </div>
 
 {% endblock %}
@@ -200,30 +197,20 @@ Aplicación CCSM
         setTimeout(ocultarCargando, 1234);
         cargarVista("formulario-muestra", "formulario", "nuevo");
     });
-/* 
-    $('.card').hover(function(){
-        if($(this).hasClass("active")){
-           $('.card .bottom').slideUp(function(){
-                $('.card').removeClass("active")
-           });
-        }else{
-            $('.card').addClass("active")
-            $('.card .bottom').stop().slideDown();
-        }
-    }); */
-      new Glider(document.querySelector('.glider'), {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        draggable: true,
-        dots: '.dots',
-        arrows: {
-          prev: '.glider-prev',
-          next: '.glider-next'
-        },
-        responsive: [
+
+    new Glider(document.querySelector('.carousel__lista'), {
+  slidesToShow: 1,
+  slidesToScroll:1,
+  draggable: true,
+  dots: '.carousel__indicadores',
+  arrows: {
+    prev: '.carousel__anterior',
+    next: '.carousel__siguiente'
+  },
+   responsive: [
     {
       // screens greater than >= 775px
-      breakpoint: 411,
+      breakpoint: 409,
       settings: {
         // Set to `auto` and provide item width to adjust to viewport
         slidesToShow: 1,
@@ -239,12 +226,10 @@ Aplicación CCSM
       }
     }
   ]
-
-     
+ 
+  
 });
 
 
-
- 
 </script>
 {% endblock %}

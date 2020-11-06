@@ -1,10 +1,10 @@
-<!doctype html>
+<!-- <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang="es"> <!--<![endif]-->
-    <head>
+<!-- <!-- <html lang="es"> <!--<![endif]-->
+<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@
         <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="mask-icon" href="favicon.svg" color="#5bbad5">
+        <link rel="mask-icon" href="favicon.s  vg" color="#5bbad5">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -55,17 +55,27 @@
         <meta property="twitter:url" content="{{Config.APP_URL}}">
         <meta property="twitter:title" content="{{Config.APP_TITULO}}">
         <meta property="twitter:description" content="{{Config.APP_DESCRIPCION}}">
-        <meta property="twitter:image" content="{{Config.APP_URL}}/favicon.png">
+        <meta property="twitter:image" content="{{Config.APP_URL}}/favicon.png">}
+
+        <!--meta-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
         <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-       <!--  <link rel="stylesheet" href="css/bootstrap-theme.min.css">   -->
+       <!--  <link rel="stylesheet" href="css/bootstrap-theme.min.css">  --> 
 
         <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" type="text/css" href="css/fontawesome/all.min.css">
         <link rel="stylesheet" type="text/css" href="css/fuente-ccsm.css">
 
-      <!--   <link rel="stylesheet" href="css/animate.css"> -->
+
+      <!--   <link rel="stylesheet" href="css/animate.css">  -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+      <script src="https://kit.fontawesome.com/f062c2af32.js" crossorigin="anonymous"></script>       
+ 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> <!--animacion de -->
         <link rel="stylesheet" href="css/sweetalert2.min.css">
         <link rel="stylesheet" href="css/magic/magic.min.css">
 
@@ -73,137 +83,116 @@
 
         <link rel="stylesheet" href="css/main.css"  media="screen" >
         <link rel="stylesheet" href="css/print.css"  media="print" >
+<style>
+    *{
+        font-family: 'Roboto', sans-serif;
+    }
+    body{
 
-        <!-- MIS ENLACES LINK-->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    }h1{
+        text-align: center;
+    }
+    p{
+        font-size:20px;
+        color:#000;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: 'Roboto', sans-serif;
-            font-weight:bold;
-            text-transform: uppercase;
-        }
-        html,body{
-            height:100%;
-        }
-        body{
-            display:grid;
-            place-items:center;
-            overflow: hidden;
-        } 
-        i{
-            color:rgba(38, 127, 255, 1);;
-        }
-        .glider-contain{
-            position:relative;
-        }
-        .glider-prev,.glider-next{
-            position:absolute;
-            display:flex;
-            width:30px;
-            height:30px;
-            border:none;
-            top:calc(50% - 30px);
-            cursor:pointer;
-            line-height:30px;
-            text-align: center;
-            
-           
-            opacity:1;
-        }
-        .glider-prev{
-            left: -30px;
-        }
-        .glider-next{
-            right: -30px;
-        }
-        }.dots .glider-dot{
-            background-color:#979899;
-            opacity:.5
-        }
-        .dots .glider-dot:hover{
-            background-color:rgba(38, 127, 255, 1);
-        }
-        .dots .glider-dot.active{
-            background-color:rgba(38, 127, 255, 1);
-        }
-        
-        .card{
-            position:relative;
-            height:350px;
-            width:200px;
-            display:block;
-            background:white;
-            transition:0.3s;
-            margin:15px
-        }
-        .card:hover{
-            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.4);
-        }
-        .card:hover .image .img-event{
-            opacity:0.6;
-            transform:scale(1.1)
-        }
-        .card .image{
-            background:black;
-            height:300px;
-            overflow:hidden;
-            
-        }
-        .image .img-event{
-            height:100%;
-            width:100%;
-            transition:all 1s;
-        }
+   .carousel{
+        margin-top:10%;
+    }
+    .carousel__contenedor{
+        position:relative;
+    }
+    .carousel__anterior,.carousel__siguiente{
+        position:absolute;
+        display:block;
+        width:30px;
+        height:30px;
+        border:none;
+        top:calc(50% - 30px);
+        cursor:pointer;
+        line-height:30px;
+        text-align: center;
+        background:none;
+        color:rgba(38, 127, 255, 1);
+        opacity:100%;
+    }
+    .carousel__anterior{
+        left: -30px;
+    } 
+    .carousel__indicadores .glider-dot{
+        background-color:#979899;
+        opacity:.5
+    }.carousel__indicadores .glider-dot:hover{
+        background-color:rgba(38, 127, 255, 1);
+    }
+    .carousel__indicadores .glider-dot.active{
+        background-color:rgba(38, 127, 255, 1);
+    }
+    .carousel__siguiente{
+        right: -30px;
+    }
+    .carousel__lista{
+        display:flex;
+        overflow: hidden;
+        height:400px;
+        padding:15px
+    }
+    /* card */
+    .carousel__elemento{
+        position: relative;
+        margin:10px;
+        overflow: hidden;
+        display:block;
+        text-align: center;
+        transition: all 0.5s;
 
-        .card .content{
-            position:absolute;
-            bottom:0;
-            background:white;
-            width: 100%;
-            text-align: center;
-            padding:15px 15px; 
-            transition:all 0.5s;
-           
-        }
+    }
+    .carousel__elemento:hover{
+        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);
 
-        .card:hover .content{
-            background: rgba(255, 255, 255, 0.3);
-            border-top-left-radius:30px;
-            border-top-right-radius:30px;
-        }
-        .content .title{
-            font-size:18px;
-            font-weight:600px;
-            color:black;
-            margin-bottom:15px ;
-            white-space:nowrap;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }
-        .bottom button{
-            transition:0.3s ease;
-        }
-        .bottom button:hover{
-            transform:scale(0.9);
-        }
-        .modal-title{
-            white-space: nowrap;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }.modal-body{
-            height:450px;
-           overflow-y: scroll;
-        }
-        .row{
-            margin-top:10px;
-        }
-        
-    </style>
+    }
+    .carousel__elemento:hover{
+        box-shadow:rgba(0, 0, 0, 0.1);
+    }
+    .carousel__elemento .image{
+        position:relative;
+        height:100%;
+        overflow:hidden;
+    }
+    .image .img-evento{
+        position:relative;
+        height:100%;
+        width:100%;
+        transition:all 1s;
+    }
+    .carousel__elemento:hover .image .img-evento{
+        transform:scale(1.1)
+    }
+    .carousel__elemento .contenido{
+        text-align: center;
+        bottom: 0px;
+        margin:  auto;
+        position:absolute;
+        background-color:rgba(255, 255, 255,0.40);
+        width: 100%;
+        padding:10px;
+        transition: all 0.5s;       
+    
+    }
+    .carousel__elemento:hover .contenido{
+        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);      
+    
+    }
+    .modal-body{
+        width:80%;
+        overflow-y: scroll;
+    } 
+</style>
+
     </head>
     <body  class="bg-light" >
 
@@ -211,15 +200,22 @@
             <a class="navbar-brand" href="/">
                 {% block logo %}{% endblock %}
             </a>
+            <div class="collapse navbar-collapse" id="navbarsAplicacionCCSM">
+                <ul class="navbar-nav mr-auto">
+                    {% block menu %}{% endblock %}
+                </ul>
+            </div>
         </nav>
 
-      
+        
+
+        <main role="main">
             {% block contenido %}{% endblock %}
-       
-        <footer class="text-muted text-center text-small footer ">
+        </main>
+        <!-- <footer class="text-muted text-center text-small footer ">
             <p class="mb-1">Cámara de Comercio de Santa Marta para el Magdalena &copy; {{ "now"|date("Y") }}</p>
             {% block piecera %}{% endblock %}
-        </footer>
+        </footer> -->
 
         <div class = "loader no-print" style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);" >
             <table align = "center" style = "width: 100%; height: 100%;">
@@ -242,12 +238,10 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- MIS ENLACES SCRIPT -->
-
-        <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-        <script src="https://kit.fontawesome.com/f062c2af32.js" crossorigin="anonymous"></script>
-
-        {% block js%}{% endblock %}
+      
+    
+        {% block js%}{% endblock %} 
+    
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!-- Global site tag (gtag.js) - Google Analytics -->

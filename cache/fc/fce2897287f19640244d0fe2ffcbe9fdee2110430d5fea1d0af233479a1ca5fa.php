@@ -30,6 +30,7 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
             'title' => [$this, 'block_title'],
             'css' => [$this, 'block_css'],
             'logo' => [$this, 'block_logo'],
+            'menu' => [$this, 'block_menu'],
             'contenido' => [$this, 'block_contenido'],
             'piecera' => [$this, 'block_piecera'],
             'js' => [$this, 'block_js'],
@@ -40,13 +41,13 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
     {
         $macros = $this->macros;
         // line 1
-        echo "<!doctype html>
+        echo "<!-- <!doctype html>
 <!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\" lang=\"\"> <![endif]-->
 <!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\" lang=\"\"> <![endif]-->
 <!--[if IE 8]>         <html class=\"no-js lt-ie9\" lang=\"\"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang=\"es\"> <!--<![endif]-->
-    <head>
+<!-- <!-- <html lang=\"es\"> <!--<![endif]-->
+<head>
         <meta charset=\"utf-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
@@ -73,7 +74,7 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         <meta name=\"msapplication-TileImage\" content=\"favicon/ms-icon-144x144.png\">
         <meta name=\"theme-color\" content=\"#ffffff\">
 
-        <link rel=\"mask-icon\" href=\"favicon.svg\" color=\"#5bbad5\">
+        <link rel=\"mask-icon\" href=\"favicon.s  vg\" color=\"#5bbad5\">
         <link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\">
         <link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">
 
@@ -136,188 +137,185 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         <meta property=\"twitter:image\" content=\"";
         // line 58
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["Config"] ?? null), "APP_URL", [], "any", false, false, false, 58), "html", null, true);
-        echo "/favicon.png\">
+        echo "/favicon.png\">}
+
+        <!--meta-->
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1\">
 
         <link rel=\"stylesheet\" href=\"css/jquery-ui.min.css\">
         <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">
-       <!--  <link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">   -->
+       <!--  <link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">  --> 
 
         <link rel=\"stylesheet\" type=\"text/css\" href=\"css/fontawesome-all.min.css\">
         <link rel=\"stylesheet\" type=\"text/css\" href=\"css/fontawesome/all.min.css\">
         <link rel=\"stylesheet\" type=\"text/css\" href=\"css/fuente-ccsm.css\">
 
-      <!--   <link rel=\"stylesheet\" href=\"css/animate.css\"> -->
+
+      <!--   <link rel=\"stylesheet\" href=\"css/animate.css\">  -->
+      <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css\">
+      <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
+      <script src=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js\"></script>
+      <script src=\"https://kit.fontawesome.com/f062c2af32.js\" crossorigin=\"anonymous\"></script>       
+ 
+        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css\" /> <!--animacion de -->
         <link rel=\"stylesheet\" href=\"css/sweetalert2.min.css\">
         <link rel=\"stylesheet\" href=\"css/magic/magic.min.css\">
 
         ";
-        // line 72
+        // line 82
         $this->displayBlock('css', $context, $blocks);
-        // line 73
+        // line 83
         echo "
         <link rel=\"stylesheet\" href=\"css/main.css\"  media=\"screen\" >
         <link rel=\"stylesheet\" href=\"css/print.css\"  media=\"print\" >
+<style>
+    *{
+        font-family: 'Roboto', sans-serif;
+    }
+    body{
 
-        <!-- MIS ENLACES LINK-->
-        <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css\">
+    }h1{
+        text-align: center;
+    }
+    p{
+        font-size:20px;
+        color:#000;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: 'Roboto', sans-serif;
-            font-weight:bold;
-            text-transform: uppercase;
-        }
-        html,body{
-            height:100%;
-        }
-        body{
-            display:grid;
-            place-items:center;
-            overflow: hidden;
-        } 
-        i{
-            color:rgba(38, 127, 255, 1);;
-        }
-        .glider-contain{
-            position:relative;
-        }
-        .glider-prev,.glider-next{
-            position:absolute;
-            display:flex;
-            width:30px;
-            height:30px;
-            border:none;
-            top:calc(50% - 30px);
-            cursor:pointer;
-            line-height:30px;
-            text-align: center;
-            
-           
-            opacity:1;
-        }
-        .glider-prev{
-            left: -30px;
-        }
-        .glider-next{
-            right: -30px;
-        }
-        }.dots .glider-dot{
-            background-color:#979899;
-            opacity:.5
-        }
-        .dots .glider-dot:hover{
-            background-color:rgba(38, 127, 255, 1);
-        }
-        .dots .glider-dot.active{
-            background-color:rgba(38, 127, 255, 1);
-        }
-        .lista__elementos{
-            display:flex;
-            overflow: hidden;
-            height:400px;
-        }
-        .card{
-            position:relative;
-            overflow: hidden;
-            background:white;
-            transition:0.3s;
-            margin:15px
-        }
-        .card:hover{
-            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.4);
-        }
-        .card:hover .image .img-event{
-            opacity:0.6;
-            transform:scale(1.1)
-        }
-        .card .image{
-            background:black;
-            height:300px;
-            overflow:hidden;
-            
-        }
-        .image .img-event{
-            height:100%;
-            width:100%;
-            transition:all 1s;
-        }
+   .carousel{
+        margin-top:10%;
+    }
+    .carousel__contenedor{
+        position:relative;
+    }
+    .carousel__anterior,.carousel__siguiente{
+        position:absolute;
+        display:block;
+        width:30px;
+        height:30px;
+        border:none;
+        top:calc(50% - 30px);
+        cursor:pointer;
+        line-height:30px;
+        text-align: center;
+        background:none;
+        color:rgba(38, 127, 255, 1);
+        opacity:100%;
+    }
+    .carousel__anterior{
+        left: -30px;
+    } 
+    .carousel__indicadores .glider-dot{
+        background-color:#979899;
+        opacity:.5
+    }.carousel__indicadores .glider-dot:hover{
+        background-color:rgba(38, 127, 255, 1);
+    }
+    .carousel__indicadores .glider-dot.active{
+        background-color:rgba(38, 127, 255, 1);
+    }
+    .carousel__siguiente{
+        right: -30px;
+    }
+    .carousel__lista{
+        display:flex;
+        overflow: hidden;
+        height:400px;
+        padding:15px
+    }
+    /* card */
+    .carousel__elemento{
+        position: relative;
+        margin:10px;
+        overflow: hidden;
+        display:block;
+        text-align: center;
+        transition: all 0.5s;
 
-        .card .content{
-            position:absolute;
-            bottom:0;
-            background:white;
-            width: 100%;
-            text-align: center;
-            padding:15px 15px; 
-            transition:all 0.5s;
-           
-        }
+    }
+    .carousel__elemento:hover{
+        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);
 
-        .card:hover .content{
-            background: rgba(255, 255, 255, 0.3);
-            border-top-left-radius:30px;
-            border-top-right-radius:30px;
-        }
-        .content .title{
-            font-size:18px;
-            font-weight:600px;
-            color:black;
-            margin-bottom:15px ;
-            white-space:nowrap;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }
-        .bottom button{
-            transition:0.3s ease;
-        }
-        .bottom button:hover{
-            transform:scale(0.9);
-        }
-        .modal-title{
-            white-space: nowrap;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }.modal-body{
-            height:450px;
-           overflow-y: scroll;
-        }
-        .row{
-            margin-top:10px;
-        }
-        
-    </style>
+    }
+    .carousel__elemento:hover{
+        box-shadow:rgba(0, 0, 0, 0.1);
+    }
+    .carousel__elemento .image{
+        position:relative;
+        height:100%;
+        overflow:hidden;
+    }
+    .image .img-evento{
+        position:relative;
+        height:100%;
+        width:100%;
+        transition:all 1s;
+    }
+    .carousel__elemento:hover .image .img-evento{
+        transform:scale(1.1)
+    }
+    .carousel__elemento .contenido{
+        text-align: center;
+        bottom: 0px;
+        margin:  auto;
+        position:absolute;
+        background-color:rgba(255, 255, 255,0.40);
+        width: 100%;
+        padding:10px;
+        transition: all 0.5s;       
+    
+    }
+    .carousel__elemento:hover .contenido{
+        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);      
+    
+    }
+    .modal-body{
+        width:80%;
+        overflow-y: scroll;
+    } 
+</style>
+
     </head>
     <body  class=\"bg-light\" >
 
         <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
             <a class=\"navbar-brand\" href=\"/\">
                 ";
-        // line 214
+        // line 201
         $this->displayBlock('logo', $context, $blocks);
-        // line 215
+        // line 202
         echo "            </a>
+            <div class=\"collapse navbar-collapse\" id=\"navbarsAplicacionCCSM\">
+                <ul class=\"navbar-nav mr-auto\">
+                    ";
+        // line 205
+        $this->displayBlock('menu', $context, $blocks);
+        // line 206
+        echo "                </ul>
+            </div>
         </nav>
 
-      
+        
+
+        <main role=\"main\">
             ";
-        // line 219
+        // line 213
         $this->displayBlock('contenido', $context, $blocks);
-        // line 220
-        echo "       
-        <footer class=\"text-muted text-center text-small footer \">
+        // line 214
+        echo "        </main>
+        <!-- <footer class=\"text-muted text-center text-small footer \">
             <p class=\"mb-1\">Cámara de Comercio de Santa Marta para el Magdalena &copy; ";
-        // line 222
+        // line 216
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "</p>
             ";
-        // line 223
+        // line 217
         $this->displayBlock('piecera', $context, $blocks);
-        // line 224
-        echo "        </footer>
+        // line 218
+        echo "        </footer> -->
 
         <div class = \"loader no-print\" style = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);\" >
             <table align = \"center\" style = \"width: 100%; height: 100%;\">
@@ -340,16 +338,14 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         <script src=\"js/plugins.js\"></script>
         <script src=\"js/main.js\"></script>
 
-        <!-- MIS ENLACES SCRIPT -->
-
-        <script src=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js\"></script>
-        <script src=\"https://kit.fontawesome.com/f062c2af32.js\" crossorigin=\"anonymous\"></script>
-
+      
+    
         ";
-        // line 252
+        // line 243
         $this->displayBlock('js', $context, $blocks);
-        // line 253
-        echo "
+        echo " 
+    
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-ZBTLK22S7Q\"></script>
@@ -368,8 +364,7 @@ gtag('config', 'G-ZBTLK22S7Q');
         </script>
 
     </body>
-</html>
-";
+</html>";
     }
 
     // line 39
@@ -378,31 +373,37 @@ gtag('config', 'G-ZBTLK22S7Q');
         $macros = $this->macros;
     }
 
-    // line 72
+    // line 82
     public function block_css($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 214
+    // line 201
     public function block_logo($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 219
+    // line 205
+    public function block_menu($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+    }
+
+    // line 213
     public function block_contenido($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 223
+    // line 217
     public function block_piecera($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 252
+    // line 243
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -420,18 +421,18 @@ gtag('config', 'G-ZBTLK22S7Q');
 
     public function getDebugInfo()
     {
-        return array (  406 => 252,  400 => 223,  394 => 219,  388 => 214,  382 => 72,  376 => 39,  352 => 253,  350 => 252,  320 => 224,  318 => 223,  314 => 222,  310 => 220,  308 => 219,  302 => 215,  300 => 214,  157 => 73,  155 => 72,  138 => 58,  134 => 57,  130 => 56,  126 => 55,  119 => 51,  115 => 50,  111 => 49,  107 => 48,  98 => 42,  94 => 41,  90 => 40,  83 => 39,  43 => 1,);
+        return array (  407 => 243,  401 => 217,  395 => 213,  389 => 205,  383 => 201,  377 => 82,  371 => 39,  345 => 243,  318 => 218,  316 => 217,  312 => 216,  308 => 214,  306 => 213,  297 => 206,  295 => 205,  290 => 202,  288 => 201,  168 => 83,  166 => 82,  139 => 58,  135 => 57,  131 => 56,  127 => 55,  120 => 51,  116 => 50,  112 => 49,  108 => 48,  99 => 42,  95 => 41,  91 => 40,  84 => 39,  44 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!doctype html>
+        return new Source("<!-- <!doctype html>
 <!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\" lang=\"\"> <![endif]-->
 <!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\" lang=\"\"> <![endif]-->
 <!--[if IE 8]>         <html class=\"no-js lt-ie9\" lang=\"\"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html lang=\"es\"> <!--<![endif]-->
-    <head>
+<!-- <!-- <html lang=\"es\"> <!--<![endif]-->
+<head>
         <meta charset=\"utf-8\">
         <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
@@ -458,7 +459,7 @@ gtag('config', 'G-ZBTLK22S7Q');
         <meta name=\"msapplication-TileImage\" content=\"favicon/ms-icon-144x144.png\">
         <meta name=\"theme-color\" content=\"#ffffff\">
 
-        <link rel=\"mask-icon\" href=\"favicon.svg\" color=\"#5bbad5\">
+        <link rel=\"mask-icon\" href=\"favicon.s  vg\" color=\"#5bbad5\">
         <link rel=\"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\">
         <link rel=\"icon\" href=\"favicon.ico\" type=\"image/x-icon\">
 
@@ -482,17 +483,27 @@ gtag('config', 'G-ZBTLK22S7Q');
         <meta property=\"twitter:url\" content=\"{{Config.APP_URL}}\">
         <meta property=\"twitter:title\" content=\"{{Config.APP_TITULO}}\">
         <meta property=\"twitter:description\" content=\"{{Config.APP_DESCRIPCION}}\">
-        <meta property=\"twitter:image\" content=\"{{Config.APP_URL}}/favicon.png\">
+        <meta property=\"twitter:image\" content=\"{{Config.APP_URL}}/favicon.png\">}
+
+        <!--meta-->
+        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1\">
 
         <link rel=\"stylesheet\" href=\"css/jquery-ui.min.css\">
         <link rel=\"stylesheet\" href=\"css/bootstrap.min.css\">
-       <!--  <link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">   -->
+       <!--  <link rel=\"stylesheet\" href=\"css/bootstrap-theme.min.css\">  --> 
 
         <link rel=\"stylesheet\" type=\"text/css\" href=\"css/fontawesome-all.min.css\">
         <link rel=\"stylesheet\" type=\"text/css\" href=\"css/fontawesome/all.min.css\">
         <link rel=\"stylesheet\" type=\"text/css\" href=\"css/fuente-ccsm.css\">
 
-      <!--   <link rel=\"stylesheet\" href=\"css/animate.css\"> -->
+
+      <!--   <link rel=\"stylesheet\" href=\"css/animate.css\">  -->
+      <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css\">
+      <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
+      <script src=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js\"></script>
+      <script src=\"https://kit.fontawesome.com/f062c2af32.js\" crossorigin=\"anonymous\"></script>       
+ 
+        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css\" /> <!--animacion de -->
         <link rel=\"stylesheet\" href=\"css/sweetalert2.min.css\">
         <link rel=\"stylesheet\" href=\"css/magic/magic.min.css\">
 
@@ -500,139 +511,116 @@ gtag('config', 'G-ZBTLK22S7Q');
 
         <link rel=\"stylesheet\" href=\"css/main.css\"  media=\"screen\" >
         <link rel=\"stylesheet\" href=\"css/print.css\"  media=\"print\" >
+<style>
+    *{
+        font-family: 'Roboto', sans-serif;
+    }
+    body{
 
-        <!-- MIS ENLACES LINK-->
-        <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css\">
+    }h1{
+        text-align: center;
+    }
+    p{
+        font-size:20px;
+        color:#000;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: 'Roboto', sans-serif;
-            font-weight:bold;
-            text-transform: uppercase;
-        }
-        html,body{
-            height:100%;
-        }
-        body{
-            display:grid;
-            place-items:center;
-            overflow: hidden;
-        } 
-        i{
-            color:rgba(38, 127, 255, 1);;
-        }
-        .glider-contain{
-            position:relative;
-        }
-        .glider-prev,.glider-next{
-            position:absolute;
-            display:flex;
-            width:30px;
-            height:30px;
-            border:none;
-            top:calc(50% - 30px);
-            cursor:pointer;
-            line-height:30px;
-            text-align: center;
-            
-           
-            opacity:1;
-        }
-        .glider-prev{
-            left: -30px;
-        }
-        .glider-next{
-            right: -30px;
-        }
-        }.dots .glider-dot{
-            background-color:#979899;
-            opacity:.5
-        }
-        .dots .glider-dot:hover{
-            background-color:rgba(38, 127, 255, 1);
-        }
-        .dots .glider-dot.active{
-            background-color:rgba(38, 127, 255, 1);
-        }
-        .lista__elementos{
-            display:flex;
-            overflow: hidden;
-            height:400px;
-        }
-        .card{
-            position:relative;
-            overflow: hidden;
-            background:white;
-            transition:0.3s;
-            margin:15px
-        }
-        .card:hover{
-            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.4);
-        }
-        .card:hover .image .img-event{
-            opacity:0.6;
-            transform:scale(1.1)
-        }
-        .card .image{
-            background:black;
-            height:300px;
-            overflow:hidden;
-            
-        }
-        .image .img-event{
-            height:100%;
-            width:100%;
-            transition:all 1s;
-        }
+   .carousel{
+        margin-top:10%;
+    }
+    .carousel__contenedor{
+        position:relative;
+    }
+    .carousel__anterior,.carousel__siguiente{
+        position:absolute;
+        display:block;
+        width:30px;
+        height:30px;
+        border:none;
+        top:calc(50% - 30px);
+        cursor:pointer;
+        line-height:30px;
+        text-align: center;
+        background:none;
+        color:rgba(38, 127, 255, 1);
+        opacity:100%;
+    }
+    .carousel__anterior{
+        left: -30px;
+    } 
+    .carousel__indicadores .glider-dot{
+        background-color:#979899;
+        opacity:.5
+    }.carousel__indicadores .glider-dot:hover{
+        background-color:rgba(38, 127, 255, 1);
+    }
+    .carousel__indicadores .glider-dot.active{
+        background-color:rgba(38, 127, 255, 1);
+    }
+    .carousel__siguiente{
+        right: -30px;
+    }
+    .carousel__lista{
+        display:flex;
+        overflow: hidden;
+        height:400px;
+        padding:15px
+    }
+    /* card */
+    .carousel__elemento{
+        position: relative;
+        margin:10px;
+        overflow: hidden;
+        display:block;
+        text-align: center;
+        transition: all 0.5s;
 
-        .card .content{
-            position:absolute;
-            bottom:0;
-            background:white;
-            width: 100%;
-            text-align: center;
-            padding:15px 15px; 
-            transition:all 0.5s;
-           
-        }
+    }
+    .carousel__elemento:hover{
+        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);
 
-        .card:hover .content{
-            background: rgba(255, 255, 255, 0.3);
-            border-top-left-radius:30px;
-            border-top-right-radius:30px;
-        }
-        .content .title{
-            font-size:18px;
-            font-weight:600px;
-            color:black;
-            margin-bottom:15px ;
-            white-space:nowrap;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }
-        .bottom button{
-            transition:0.3s ease;
-        }
-        .bottom button:hover{
-            transform:scale(0.9);
-        }
-        .modal-title{
-            white-space: nowrap;
-            overflow:hidden;
-            text-overflow: ellipsis;
-        }.modal-body{
-            height:450px;
-           overflow-y: scroll;
-        }
-        .row{
-            margin-top:10px;
-        }
-        
-    </style>
+    }
+    .carousel__elemento:hover{
+        box-shadow:rgba(0, 0, 0, 0.1);
+    }
+    .carousel__elemento .image{
+        position:relative;
+        height:100%;
+        overflow:hidden;
+    }
+    .image .img-evento{
+        position:relative;
+        height:100%;
+        width:100%;
+        transition:all 1s;
+    }
+    .carousel__elemento:hover .image .img-evento{
+        transform:scale(1.1)
+    }
+    .carousel__elemento .contenido{
+        text-align: center;
+        bottom: 0px;
+        margin:  auto;
+        position:absolute;
+        background-color:rgba(255, 255, 255,0.40);
+        width: 100%;
+        padding:10px;
+        transition: all 0.5s;       
+    
+    }
+    .carousel__elemento:hover .contenido{
+        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);      
+    
+    }
+    .modal-body{
+        width:80%;
+        overflow-y: scroll;
+    } 
+</style>
+
     </head>
     <body  class=\"bg-light\" >
 
@@ -640,15 +628,22 @@ gtag('config', 'G-ZBTLK22S7Q');
             <a class=\"navbar-brand\" href=\"/\">
                 {% block logo %}{% endblock %}
             </a>
+            <div class=\"collapse navbar-collapse\" id=\"navbarsAplicacionCCSM\">
+                <ul class=\"navbar-nav mr-auto\">
+                    {% block menu %}{% endblock %}
+                </ul>
+            </div>
         </nav>
 
-      
+        
+
+        <main role=\"main\">
             {% block contenido %}{% endblock %}
-       
-        <footer class=\"text-muted text-center text-small footer \">
+        </main>
+        <!-- <footer class=\"text-muted text-center text-small footer \">
             <p class=\"mb-1\">Cámara de Comercio de Santa Marta para el Magdalena &copy; {{ \"now\"|date(\"Y\") }}</p>
             {% block piecera %}{% endblock %}
-        </footer>
+        </footer> -->
 
         <div class = \"loader no-print\" style = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);\" >
             <table align = \"center\" style = \"width: 100%; height: 100%;\">
@@ -671,12 +666,10 @@ gtag('config', 'G-ZBTLK22S7Q');
         <script src=\"js/plugins.js\"></script>
         <script src=\"js/main.js\"></script>
 
-        <!-- MIS ENLACES SCRIPT -->
-
-        <script src=\"https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js\"></script>
-        <script src=\"https://kit.fontawesome.com/f062c2af32.js\" crossorigin=\"anonymous\"></script>
-
-        {% block js%}{% endblock %}
+      
+    
+        {% block js%}{% endblock %} 
+    
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -696,7 +689,6 @@ gtag('config', 'G-ZBTLK22S7Q');
         </script>
 
     </body>
-</html>
-", "base.html.php", "C:\\laragon\\www\\formulario\\plantilla\\base.html.php");
+</html>", "base.html.php", "C:\\laragon\\www\\formulario\\plantilla\\base.html.php");
     }
 }
