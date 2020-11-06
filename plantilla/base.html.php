@@ -59,13 +59,13 @@
 
         <link rel="stylesheet" href="css/jquery-ui.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">  
+       <!--  <link rel="stylesheet" href="css/bootstrap-theme.min.css">   -->
 
         <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
         <link rel="stylesheet" type="text/css" href="css/fontawesome/all.min.css">
         <link rel="stylesheet" type="text/css" href="css/fuente-ccsm.css">
 
-        <link rel="stylesheet" href="css/animate.css">
+      <!--   <link rel="stylesheet" href="css/animate.css"> -->
         <link rel="stylesheet" href="css/sweetalert2.min.css">
         <link rel="stylesheet" href="css/magic/magic.min.css">
 
@@ -74,6 +74,77 @@
         <link rel="stylesheet" href="css/main.css"  media="screen" >
         <link rel="stylesheet" href="css/print.css"  media="print" >
 
+        <!-- MIS ENLACES LINK-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        html,body{
+            height:100%;
+        }
+        body{
+            display:grid;
+            place-items:center;
+            background:red;
+        }
+        .card{
+            position:relative;
+            height:470px;
+            width:340px;
+            display:block;
+            background:white;
+            transition:0.3s;
+        }
+        .card:hover{
+            box-shadow:0px 1px 35px 0px rgba(0,0,0,0.3);
+        }
+        .card.active .image .img-event{
+            opacity:0.6;
+            transform:scale(1.1)
+        }
+        .card .image{
+            background:black;
+            height:400px;
+            overflow:hidden;
+            
+        }
+        .image .img-event{
+            height:100%;
+            width:100%;
+            transition:1s;
+        }
+
+        .card .content{
+            position:absolute;
+            bottom:0;
+            background:white;
+            width: 100%;
+            text-align: center;
+            padding:10px 15px; 
+           
+        }
+        .content .title{
+            font-size:24px;
+            font-weight:600px;
+            color:#e74c3c;
+            margin-bottom:15px 
+        }
+        .bottom button{
+            transition:0.3s ease;
+        }
+        .bottom button:hover{
+            transform:scale(0.9);
+        }
+        .bottom{
+            display:none;
+        }
+        
+    </style>
     </head>
     <body  class="bg-light" >
 
@@ -81,20 +152,11 @@
             <a class="navbar-brand" href="/">
                 {% block logo %}{% endblock %}
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsAplicacionCCSM" aria-controls="navbarsAplicacionCCSM" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsAplicacionCCSM">
-                <ul class="navbar-nav mr-auto">
-                    {% block menu %}{% endblock %}
-                </ul>
-            </div>
         </nav>
 
-        <main role="main">
+      
             {% block contenido %}{% endblock %}
-        </main>
+       
         <footer class="text-muted text-center text-small footer ">
             <p class="mb-1">Cámara de Comercio de Santa Marta para el Magdalena &copy; {{ "now"|date("Y") }}</p>
             {% block piecera %}{% endblock %}
@@ -120,6 +182,8 @@
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+        <!-- MIS ENLACES SCRIPT -->
 
         {% block js%}{% endblock %}
 
