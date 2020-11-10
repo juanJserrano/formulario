@@ -83,17 +83,33 @@
 
         <link rel="stylesheet" href="css/main.css"  media="screen" >
         <link rel="stylesheet" href="css/print.css"  media="print" >
+        <script type="text/javascript">
+            var _apisicam = _apisicam || {};
+            _apisicam.clavePublica = 'UH2NeOFONF+fFIvrdE/+CvuuQbX4iQ+6rxcx0h71gdaSDNV0vn5ZWq9ngOBeDsHS';
+            _apisicam.clavePrivada = 'p+NcgxIqwqg7Khl4BvOmN08RQtSM68OMpC5uFZC+mYE=';
+            window.apisicam || (function (d) {
+                var s, c, o = apisicam = function () {
+                    o._.push(arguments)
+                };
+                o._ = [];
+                s = d.getElementsByTagName('script')[0];
+                c = d.createElement('script');
+                c.type = 'text/javascript';
+                c.charset = 'utf-8';
+                c.async = true;
+                c.src = 'https://cliente.api.sicam32.net/javascript/index.php?' + _apisicam.clavePublica + ':' + _apisicam.clavePrivada;
+                s.parentNode.insertBefore(c, s);
+            })(document);
+        </script>
 <style>
     *{
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Tw Cen MT';
     }
-    body{
-        overflow: hidden;
+    h2{
+        text-align: center!important;
+        margin-top:2rem;
     }
-    h1{
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-    }
+
     p{
         font-size:20px;
         color:#000;
@@ -101,16 +117,13 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
    .carousel{
-        margin-top:10%;
-    }
-    .carousel__contenedor{
+        margin-top:6%;
         position:relative;
     }
     .carousel__anterior,.carousel__siguiente{
         position:absolute;
-        display:block;
+        display:flex;
         width:30px;
         height:30px;
         border:none;
@@ -119,11 +132,12 @@
         line-height:30px;
         text-align: center;
         background:none;
-        color:rgba(38, 127, 255, 1);
         opacity:100%;
+        color:rgba(0,0,0,0.75);
+        font-size:25px;
     }
     .carousel__anterior{
-        left: -30px;
+        left: -50px;
     } 
     .carousel__indicadores .glider-dot{
         background-color:#979899;
@@ -135,13 +149,13 @@
         background-color:rgba(38, 127, 255, 1);
     }
     .carousel__siguiente{
-        right: -30px;
+        right: -45px;
     }
     .carousel__lista{
         display:flex;
         overflow: hidden;
         height:400px;
-        padding:15px
+        padding:20px 0px
     }
     /* card */
     .carousel__elemento{
@@ -154,11 +168,12 @@
 
     }
     .carousel__elemento:hover{
-        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);
+        box-shadow:0px 0px 15px 3px rgba(5, 0, 3, 0.5);
 
     }
-    .carousel__elemento:hover{
-        box-shadow:rgba(0, 0, 0, 0.1);
+    .carousel__elemento:active{
+        box-shadow:0px 0px 15px 3px rgba(5, 0, 3, 0.5);
+
     }
     .carousel__elemento .image{
         position:relative;
@@ -195,9 +210,46 @@
     }
     .row{
         margin-top:15px
+    }
+    .container{
+        width:100%;
+        padding:15px;
+        background:white;
+        box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
+        border-radius: .25rem;
     } 
-</style>
+    #staticBackdrop{
+        overflow-y:hidden;
+    }
 
+    @media only screen and (max-width: 540px){
+        .carousel__anterior,.carousel__siguiente{
+        position:absolute;
+        display:flex;
+        width:30px;
+        height:30px;
+        padding:5px;
+        border:none;
+        top:calc(50% - 30px);
+        cursor:pointer;
+        line-height:30px;
+        text-align: center;
+        background:none;
+        opacity:100%;
+        color:rgba(0,0,0,0.75);
+        font-size:25px
+
+        
+        }
+        .carousel__anterior{
+            left: -20px;
+        } 
+        .carousel__siguiente{
+        right: -15px;
+        }
+    }
+</style>
+        
     </head>
     <body  class="bg-light" >
 
@@ -217,10 +269,10 @@
         <main role="main">
             {% block contenido %}{% endblock %}
         </main>
-        <!-- <footer class="text-muted text-center text-small footer ">
+         <footer class="text-muted text-center text-small footer ">
             <p class="mb-1">Cámara de Comercio de Santa Marta para el Magdalena &copy; {{ "now"|date("Y") }}</p>
             {% block piecera %}{% endblock %}
-        </footer> -->
+        </footer> 
 
         <div class = "loader no-print" style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);" >
             <table align = "center" style = "width: 100%; height: 100%;">

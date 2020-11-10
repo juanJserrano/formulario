@@ -168,17 +168,33 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         echo "
         <link rel=\"stylesheet\" href=\"css/main.css\"  media=\"screen\" >
         <link rel=\"stylesheet\" href=\"css/print.css\"  media=\"print\" >
+        <script type=\"text/javascript\">
+            var _apisicam = _apisicam || {};
+            _apisicam.clavePublica = 'UH2NeOFONF+fFIvrdE/+CvuuQbX4iQ+6rxcx0h71gdaSDNV0vn5ZWq9ngOBeDsHS';
+            _apisicam.clavePrivada = 'p+NcgxIqwqg7Khl4BvOmN08RQtSM68OMpC5uFZC+mYE=';
+            window.apisicam || (function (d) {
+                var s, c, o = apisicam = function () {
+                    o._.push(arguments)
+                };
+                o._ = [];
+                s = d.getElementsByTagName('script')[0];
+                c = d.createElement('script');
+                c.type = 'text/javascript';
+                c.charset = 'utf-8';
+                c.async = true;
+                c.src = 'https://cliente.api.sicam32.net/javascript/index.php?' + _apisicam.clavePublica + ':' + _apisicam.clavePrivada;
+                s.parentNode.insertBefore(c, s);
+            })(document);
+        </script>
 <style>
     *{
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Tw Cen MT';
     }
-    body{
-        overflow: hidden;
+    h2{
+        text-align: center!important;
+        margin-top:2rem;
     }
-    h1{
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-    }
+
     p{
         font-size:20px;
         color:#000;
@@ -186,16 +202,16 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
-   .carousel{
-        margin-top:10%;
+    body{
+        overflow-x: hidden;
     }
-    .carousel__contenedor{
+   .carousel{
+        margin-top:6%;
         position:relative;
     }
     .carousel__anterior,.carousel__siguiente{
         position:absolute;
-        display:block;
+        display:flex;
         width:30px;
         height:30px;
         border:none;
@@ -204,11 +220,12 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         line-height:30px;
         text-align: center;
         background:none;
-        color:rgba(38, 127, 255, 1);
         opacity:100%;
+        color:rgba(0,0,0,0.75);
+        font-size:25px;
     }
     .carousel__anterior{
-        left: -30px;
+        left: -50px;
     } 
     .carousel__indicadores .glider-dot{
         background-color:#979899;
@@ -220,13 +237,13 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         background-color:rgba(38, 127, 255, 1);
     }
     .carousel__siguiente{
-        right: -30px;
+        right: -45px;
     }
     .carousel__lista{
         display:flex;
         overflow: hidden;
         height:400px;
-        padding:15px
+        padding:20px 0px
     }
     /* card */
     .carousel__elemento{
@@ -239,11 +256,12 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
 
     }
     .carousel__elemento:hover{
-        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);
+        box-shadow:0px 0px 15px 3px rgba(5, 0, 3, 0.5);
 
     }
-    .carousel__elemento:hover{
-        box-shadow:rgba(0, 0, 0, 0.1);
+    .carousel__elemento:active{
+        box-shadow:0px 0px 15px 3px rgba(5, 0, 3, 0.5);
+
     }
     .carousel__elemento .image{
         position:relative;
@@ -280,25 +298,62 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
     }
     .row{
         margin-top:15px
+    }
+    .container{
+        width:100%;
+        padding:15px;
+        background:white;
+        box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
+        border-radius: .25rem;
     } 
-</style>
+    #staticBackdrop{
+        overflow-y:hidden;
+    }
 
+    @media only screen and (max-width: 540px){
+        .carousel__anterior,.carousel__siguiente{
+        position:absolute;
+        display:flex;
+        width:30px;
+        height:30px;
+        padding:5px;
+        border:none;
+        top:calc(50% - 30px);
+        cursor:pointer;
+        line-height:30px;
+        text-align: center;
+        background:none;
+        opacity:100%;
+        color:rgba(0,0,0,0.75);
+        font-size:25px
+
+        
+        }
+        .carousel__anterior{
+            left: -20px;
+        } 
+        .carousel__siguiente{
+        right: -15px;
+        }
+    }
+</style>
+        
     </head>
     <body  class=\"bg-light\" >
 
         <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
             <a class=\"navbar-brand\" href=\"/\">
                 ";
-        // line 206
+        // line 261
         $this->displayBlock('logo', $context, $blocks);
-        // line 207
+        // line 262
         echo "            </a>
             <div class=\"collapse navbar-collapse\" id=\"navbarsAplicacionCCSM\">
                 <ul class=\"navbar-nav mr-auto\">
                     ";
-        // line 210
+        // line 265
         $this->displayBlock('menu', $context, $blocks);
-        // line 211
+        // line 266
         echo "                </ul>
             </div>
         </nav>
@@ -307,20 +362,20 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
 
         <main role=\"main\">
             ";
-        // line 218
+        // line 273
         $this->displayBlock('contenido', $context, $blocks);
-        // line 219
+        // line 274
         echo "        </main>
-        <!-- <footer class=\"text-muted text-center text-small footer \">
+         <footer class=\"text-muted text-center text-small footer \">
             <p class=\"mb-1\">Cámara de Comercio de Santa Marta para el Magdalena &copy; ";
-        // line 221
+        // line 276
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "</p>
             ";
-        // line 222
+        // line 277
         $this->displayBlock('piecera', $context, $blocks);
-        // line 223
-        echo "        </footer> -->
+        // line 278
+        echo "        </footer> 
 
         <div class = \"loader no-print\" style = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);\" >
             <table align = \"center\" style = \"width: 100%; height: 100%;\">
@@ -346,7 +401,7 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
       
     
         ";
-        // line 248
+        // line 303
         $this->displayBlock('js', $context, $blocks);
         echo " 
     
@@ -384,31 +439,31 @@ gtag('config', 'G-ZBTLK22S7Q');
         $macros = $this->macros;
     }
 
-    // line 206
+    // line 261
     public function block_logo($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 210
+    // line 265
     public function block_menu($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 218
+    // line 273
     public function block_contenido($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 222
+    // line 277
     public function block_piecera($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 248
+    // line 303
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -426,7 +481,7 @@ gtag('config', 'G-ZBTLK22S7Q');
 
     public function getDebugInfo()
     {
-        return array (  412 => 248,  406 => 222,  400 => 218,  394 => 210,  388 => 206,  382 => 82,  376 => 39,  350 => 248,  323 => 223,  321 => 222,  317 => 221,  313 => 219,  311 => 218,  302 => 211,  300 => 210,  295 => 207,  293 => 206,  168 => 83,  166 => 82,  139 => 58,  135 => 57,  131 => 56,  127 => 55,  120 => 51,  116 => 50,  112 => 49,  108 => 48,  99 => 42,  95 => 41,  91 => 40,  84 => 39,  44 => 1,);
+        return array (  467 => 303,  461 => 277,  455 => 273,  449 => 265,  443 => 261,  437 => 82,  431 => 39,  405 => 303,  378 => 278,  376 => 277,  372 => 276,  368 => 274,  366 => 273,  357 => 266,  355 => 265,  350 => 262,  348 => 261,  168 => 83,  166 => 82,  139 => 58,  135 => 57,  131 => 56,  127 => 55,  120 => 51,  116 => 50,  112 => 49,  108 => 48,  99 => 42,  95 => 41,  91 => 40,  84 => 39,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -516,17 +571,33 @@ gtag('config', 'G-ZBTLK22S7Q');
 
         <link rel=\"stylesheet\" href=\"css/main.css\"  media=\"screen\" >
         <link rel=\"stylesheet\" href=\"css/print.css\"  media=\"print\" >
+        <script type=\"text/javascript\">
+            var _apisicam = _apisicam || {};
+            _apisicam.clavePublica = 'UH2NeOFONF+fFIvrdE/+CvuuQbX4iQ+6rxcx0h71gdaSDNV0vn5ZWq9ngOBeDsHS';
+            _apisicam.clavePrivada = 'p+NcgxIqwqg7Khl4BvOmN08RQtSM68OMpC5uFZC+mYE=';
+            window.apisicam || (function (d) {
+                var s, c, o = apisicam = function () {
+                    o._.push(arguments)
+                };
+                o._ = [];
+                s = d.getElementsByTagName('script')[0];
+                c = d.createElement('script');
+                c.type = 'text/javascript';
+                c.charset = 'utf-8';
+                c.async = true;
+                c.src = 'https://cliente.api.sicam32.net/javascript/index.php?' + _apisicam.clavePublica + ':' + _apisicam.clavePrivada;
+                s.parentNode.insertBefore(c, s);
+            })(document);
+        </script>
 <style>
     *{
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Tw Cen MT';
     }
-    body{
-        overflow: hidden;
+    h2{
+        text-align: center!important;
+        margin-top:2rem;
     }
-    h1{
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-    }
+
     p{
         font-size:20px;
         color:#000;
@@ -534,16 +605,16 @@ gtag('config', 'G-ZBTLK22S7Q');
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
-   .carousel{
-        margin-top:10%;
+    body{
+        overflow-x: hidden;
     }
-    .carousel__contenedor{
+   .carousel{
+        margin-top:6%;
         position:relative;
     }
     .carousel__anterior,.carousel__siguiente{
         position:absolute;
-        display:block;
+        display:flex;
         width:30px;
         height:30px;
         border:none;
@@ -552,11 +623,12 @@ gtag('config', 'G-ZBTLK22S7Q');
         line-height:30px;
         text-align: center;
         background:none;
-        color:rgba(38, 127, 255, 1);
         opacity:100%;
+        color:rgba(0,0,0,0.75);
+        font-size:25px;
     }
     .carousel__anterior{
-        left: -30px;
+        left: -50px;
     } 
     .carousel__indicadores .glider-dot{
         background-color:#979899;
@@ -568,13 +640,13 @@ gtag('config', 'G-ZBTLK22S7Q');
         background-color:rgba(38, 127, 255, 1);
     }
     .carousel__siguiente{
-        right: -30px;
+        right: -45px;
     }
     .carousel__lista{
         display:flex;
         overflow: hidden;
         height:400px;
-        padding:15px
+        padding:20px 0px
     }
     /* card */
     .carousel__elemento{
@@ -587,11 +659,12 @@ gtag('config', 'G-ZBTLK22S7Q');
 
     }
     .carousel__elemento:hover{
-        box-shadow:0px 1px 15px 0px rgba(5, 0, 3, 0.5);
+        box-shadow:0px 0px 15px 3px rgba(5, 0, 3, 0.5);
 
     }
-    .carousel__elemento:hover{
-        box-shadow:rgba(0, 0, 0, 0.1);
+    .carousel__elemento:active{
+        box-shadow:0px 0px 15px 3px rgba(5, 0, 3, 0.5);
+
     }
     .carousel__elemento .image{
         position:relative;
@@ -628,9 +701,46 @@ gtag('config', 'G-ZBTLK22S7Q');
     }
     .row{
         margin-top:15px
+    }
+    .container{
+        width:100%;
+        padding:15px;
+        background:white;
+        box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.75);
+        border-radius: .25rem;
     } 
-</style>
+    #staticBackdrop{
+        overflow-y:hidden;
+    }
 
+    @media only screen and (max-width: 540px){
+        .carousel__anterior,.carousel__siguiente{
+        position:absolute;
+        display:flex;
+        width:30px;
+        height:30px;
+        padding:5px;
+        border:none;
+        top:calc(50% - 30px);
+        cursor:pointer;
+        line-height:30px;
+        text-align: center;
+        background:none;
+        opacity:100%;
+        color:rgba(0,0,0,0.75);
+        font-size:25px
+
+        
+        }
+        .carousel__anterior{
+            left: -20px;
+        } 
+        .carousel__siguiente{
+        right: -15px;
+        }
+    }
+</style>
+        
     </head>
     <body  class=\"bg-light\" >
 
@@ -650,10 +760,10 @@ gtag('config', 'G-ZBTLK22S7Q');
         <main role=\"main\">
             {% block contenido %}{% endblock %}
         </main>
-        <!-- <footer class=\"text-muted text-center text-small footer \">
+         <footer class=\"text-muted text-center text-small footer \">
             <p class=\"mb-1\">Cámara de Comercio de Santa Marta para el Magdalena &copy; {{ \"now\"|date(\"Y\") }}</p>
             {% block piecera %}{% endblock %}
-        </footer> -->
+        </footer> 
 
         <div class = \"loader no-print\" style = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);\" >
             <table align = \"center\" style = \"width: 100%; height: 100%;\">

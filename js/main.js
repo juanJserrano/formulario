@@ -1,3 +1,4 @@
+
 function cargarPlugins() {
     $("form").attr('onsubmit', 'return false;');
     $("form").attr('enctype', 'application/x-www-form-urlencoded');
@@ -84,6 +85,21 @@ function ejecutarOperacionSICAM(rutaOperacion, datosOperacion, functionEjecutabl
             function (respuestaHTML) {
                 console.log(respuestaHTML);
                 console.log(respuestaHTML.MENSAJE);                
+                validarRespuestaSICAM(respuestaHTML, functionEjecutable);
+//                 if (typeof functionEjecutable === "function") {
+//                     functionEjecutable(respuestaHTML);
+//                 }
+                ocultarCargando();
+            }
+    );
+}
+
+function ejecutarOperacionSinValidarSICAM(rutaOperacion, datosOperacion, functionEjecutable = null) {
+    mostrarCargando();
+    ApiSicam.ejecutarPost(rutaOperacion, datosOperacion,
+            function (respuestaHTML) {
+                console.log(respuestaHTML);
+                console.log(respuestaHTML.MENSAJE);                                
                 if (typeof functionEjecutable === "function") {
                     functionEjecutable(respuestaHTML);
                 }
@@ -91,6 +107,8 @@ function ejecutarOperacionSICAM(rutaOperacion, datosOperacion, functionEjecutabl
             }
     );
 }
+
+
 
 function ejecutarOperacionOcultaSICAM(rutaOperacion, datosOperacion, functionEjecutable = null) {
     //mostrarCargando();
@@ -106,7 +124,7 @@ function ejecutarOperacionOcultaSICAM(rutaOperacion, datosOperacion, functionEje
     );
 }
 
-function validarRespuesta(response, funcionEjecutable = null) {
+function validarRespuestaSICAM(response, funcionEjecutable = null) {
 //    if (isJson(data)) {
 //        var response = JSON.parse(data);
     switch (response.RESPUESTA) {
@@ -148,14 +166,14 @@ function avisoError(texto) {
     beepError();
     return Swal.fire({
         icon: 'error',
-        title: 'Oops... ¡Error!',
+        title: 'Oops... Â¡Error!',
         html: texto
     });
 }
 
 function avisoInformacion(texto) {
     return Swal.fire({
-        title: '¡Atento!',
+        title: 'Â¡Atento!',
         icon: 'info',
         html: texto,
         showCloseButton: true
@@ -183,6 +201,5 @@ function avisoExito(texto) {
         timer: 30456
     });
 }
-
 
 

@@ -1,242 +1,213 @@
-<div class="py-5 text-center wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
-    <img class="d-block mx-auto mb-4" src="favicon/android-chrome-512x512.png" alt="" width="72" height="72">
-    <h2>Checkout form</h2>
-    <p class="lead">Below is an example form built entirely with Bootstrap's form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-</div>
+<div class="jumbotron wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
+        <h2><strong>Lista de eventos</strong></h2>
+        <hr>
+    <div class="container">
+        <div class="carousel" style="display:none" >
+            
+        
+            <!-- Elemento del carousel -->
+                    <div class="carousel__lista" id="carouseleventos">
+                       
+                    </div>
+            <!-- boton anterior -->
+                            <button aria-label="Anterior" class="carousel__anterior" id="glider">
+                                <i class="fas fa-chevron-circle-left"></i>                
+                            </button>
+            <!-- boton siguiente -->      
+                            <button aria-label="Siguiente" class="carousel__siguiente" id="glider">
+                                <i class="fas fa-chevron-circle-right"></i>          
+                            </button>
+            <!-- pagination -->    
+            <div role="tablist" class="carousel__indicadores"></div> 
+ 
+        </div>
+        
 
-<div class="row wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
-    <div class="col-md-4 order-md-2 mb-4">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-muted">Your cart</span>
-            <span class="badge badge-secondary badge-pill">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                    <h6 class="my-0">Product name</h6>
-                    <small class="text-muted">Brief description</small>
-                </div>
-                <span class="text-muted">$12</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                    <h6 class="my-0">Second product</h6>
-                    <small class="text-muted">Brief description</small>
-                </div>
-                <span class="text-muted">$8</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                <div>
-                    <h6 class="my-0">Third item</h6>
-                    <small class="text-muted">Brief description</small>
-                </div>
-                <span class="text-muted">$5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-                <div class="text-success">
-                    <h6 class="my-0">Promo code</h6>
-                    <small>EXAMPLECODE</small>
-                </div>
-                <span class="text-success">-$5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-                <span>Total (USD)</span>
-                <strong>$20</strong>
-            </li>
-        </ul>
+        
+<!-- Modal -->
 
-        <form class="card p-2">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Promo code">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-secondary">Redeem</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="col-md-8 order-md-1">
-        <h4 class="mb-3">Billing address</h4>        
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                    Valid first name is required.
-                </div>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                    Valid last name is required.
-                </div>
-            </div>
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" >
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title tituloEvento" id="staticBackdropLabel">
+                
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
         </div>
 
-        <div class="mb-3">
-            <label for="username">Username</label>
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">@</span>
-                </div>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                    Your username is required.
-                </div>
-            </div>
-        </div>
+        <div class="modal-body">
 
-        <div class="mb-3">
-            <label for="email">Email <span class="text-muted">(Optional)</span></label>
-            <input type="email" class="form-control" id="email" placeholder="you@example.com">
-            <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-            </div>
-        </div>
+            <form  id="formularioInscripcion" >
+            <!-- IDENTIFICACION -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="inputTipoIdentificacion">TIPO DE IDENTIFICACION*</label>
+                        <select class="custom-select" name="personaTIPOIDENTIFICACION" id="personaTIPOIDENTIFICACION" required>
+                            <option selected value="">Tipo identificación</option>
+                            
+                           
+                        </select>
+                    </div>
 
-        <div class="mb-3">
-            <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-            <div class="invalid-feedback">
-                Please enter your shipping address.
-            </div>
-        </div>
+                    <div class="col-md-6">
+                        <label for="inputIdentificacion">IDENTIFICACION*</label>
+                        <input type="text" class="form-control" placeholder="IDENTIFICACION" name="personaIDENTIFICACION"id="IDENTIFICACION" required>
+                    </div>
+                </div>
 
-        <div class="mb-3">
-            <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-        </div>
+            <!-- NOMBRE,APELLIDO-->
+            <div class="row">
+                    <div class="col-md-6 ">
+                        <label for="inputPrimerNombre">PRIMER NOMBRE*</label>
+                        <input type="text" class="form-control" placeholder="PRIMER NOMBRE" name="personaPRIMERNOMBRE" id="PRIMERNOMBRE" required>
+                    </div>
 
-        <div class="row">
-            <div class="col-md-5 mb-3">
-                <label for="country">Country</label>
-                <select class="custom-select d-block w-100" id="country" required>
-                    <option value="">Choose...</option>
-                    <option>United States</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid country.
-                </div>
+                    <div class="col-md-6 ">
+                        <label for="inputSegundoNombre">SEGUNDO NOMBRE</label>
+                        <input type="text" class="form-control" placeholder="SEGUNDO NOMBRE" name="personaSEGUNDONOMBRE" id="SEGUNDONOMBRE">
+                    </div>
             </div>
-            <div class="col-md-4 mb-3">
-                <label for="state">State</label>
-                <select class="custom-select d-block w-100" id="state" required>
-                    <option value="">Choose...</option>
-                    <option>California</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please provide a valid state.
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="zip">Zip</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required>
-                <div class="invalid-feedback">
-                    Zip code required.
-                </div>
-            </div>
-        </div>
-        <hr class="mb-4">
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="same-address">
-            <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="save-info">
-            <label class="custom-control-label" for="save-info">Save this information for next time</label>
-        </div>
-        <hr class="mb-4">
 
-        <h4 class="mb-3">Payment</h4>
+            <div class="row">
+                    <div class="col-md-6 ">
+                        <label for="inputPrimerApellido">PRIMER APELLIDO*</label>
+                        <input type="text" class="form-control" placeholder="PRIMER APELLIDO" name="personaPRIMERAPELLIDO" id="PRIMERAPELLIDO" required>
+                    </div>
 
-        <div class="d-block my-3">
-            <div class="custom-control custom-radio">
-                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-                <label class="custom-control-label" for="credit">Credit card</label>
+                    <div class="col-md-6 ">
+                        <label for="inputSegundoApellido">SEGUNDO APELLIDO*</label>
+                        <input type="text" class="form-control" placeholder="SEGUNDO APELLIDO" name="segundoAPELLIDO" id="SEGUNDOAPELLIDO" required>
+                    </div>
             </div>
-            <div class="custom-control custom-radio">
-                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="debit">Debit card</label>
-            </div>
-            <div class="custom-control custom-radio">
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="paypal">Paypal</label>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="cc-name">Name on card</label>
-                <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                <small class="text-muted">Full name as displayed on card</small>
-                <div class="invalid-feedback">
-                    Name on card is required
-                </div>
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="cc-number">Credit card number</label>
-                <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                <div class="invalid-feedback">
-                    Credit card number is required
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 mb-3">
-                <label for="cc-expiration">Expiration</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                <div class="invalid-feedback">
-                    Expiration date required
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="cc-expiration">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                <div class="invalid-feedback">
-                    Security code required
-                </div>
-            </div>
-        </div>
-        <hr class="mb-4">
 
+            <!-- CORREO ELTRONICO, TELEFONO -->
+            <div class="row">
+                    <div class="col-md-12">
+                        <label for="inputCorreoEletronico">CORREO ELETRONICO*</label>
+                        <input type="email" class="form-control" placeholder="CORREO ELETRONICO" name="personaCORREOELETRONICO" id="CORREOELETRONICO" required>
+                    </div>
+            </div>
+
+            <div class="row">
+                    <div class="col-md-12">
+                        <label for="inputNumeroCelular">NUMERO CELULAR*</label>
+                        <input type="number" class="form-control" placeholder="NUMERO CELULAR" name="personaNUMEROCELULAR" id="NUMEROCELULAR" required>
+                    </div>
+            </div>
+            
+            <input type="hidden" name="eventoID" value="" id="eventoID">
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary" id="enviarInscripcion" >Listo</button>
+        </div>
+        </div>
 
     </div>
 </div>
-
-<div class="row wow slideInLeft" data-wow-duration="2s" data-wow-delay="1s">
-    <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
-    </div>
-</div>
-<form id="frm-formulario" onsubmit="return false;" >
-    <input type="text" name="cedula" id="valor" value="" required="" />
-    <button class="btn btn-primary btn-lg btn-block" type="submit" >Continue to checkout</button>
-</form>
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $("#frm-formulario").submit(function (e) {
-            var datos = $(this).serialize();
-            enviarDatosFormulario(datos);
-        });
+        
+
+        
+    new Glider(document.querySelector('.carousel__lista'), {
+    slidesToShow: 1,
+    slidesToScroll:1,
+    resizeLock:true,
+    scrollLock: true,
+    rewind:true,
+    draggable: true,
+    dots: '.carousel__indicadores',
+    arrows: {
+        prev: '.carousel__anterior',
+        next: '.carousel__siguiente'
+    },
+    responsive: [
+        {
+        // screens greater than >= 775px
+        breakpoint: 409,
+        settings: {
+            // Set to `auto` and provide item width to adjust to viewport
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
+        },{
+        // screens greater than >= 1024px
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+        
+        }
+        }
+    ]
+    
+    
     });
-    function enviarDatosFormulario(datos) {
-        console.log(datos);
-        ejecutarOperacionSICAM('administracion/appVisitas/autenticarColaborador/', datos, function (respuesta) {
-            alert('recibido');
-            alert(respuesta);
+
+    $("#enviarInscripcion").click(function(){
+        console.log($("#formularioInscripcion").serialize());
+        ejecutarOperacionSICAM("/tienda-apps/AppInscripcionAEventos/guardar/",$("#formularioInscripcion").serialize(), function(respuesta){
+            console.log(respuesta);
+        }); 
+        
+    });
+    setTimeout(
+     function() 
+     {
+        ejecutarOperacionSinValidarSICAM("/tienda-apps/AppInscripcionAEventos/datosFormulario/",null, function(respuesta){
+            console.log(respuesta);
+            if(respuesta.DATOS){ 
+                agregarEventos(respuesta.DATOS.Eventos)
+                agregarTipoIdentificacion(respuesta.DATOS.TiposIdentificaciones);
+            }
+        }); 
+     }, 500);
+    
+    });
+    
+
+
+    
+                            
+                              
+                                                            
+                                
+                                    
+                               
+                            
+                        
+
+    function agregarEventos(eventos){
+        $(".carousel").slideDown();
+        eventos.forEach(evento=>{ 
+            let html="<div class='carousel__elemento'> <div class='image'>";
+            html += " <img src='img/live-concert.jpg'   alt='Imgen del evento' class='img-evento' ></div><div class='contenido'> ";
+            html += " <p>"+evento.eventoTITULO +"</p>";
+            html += "<button class='btn btn-primary registro' onClick='eventoSeleccionado("+evento.eventoID+",\""+evento.eventoTITULO+"\")' data-toggle='modal' data-target='#staticBackdrop'>Registrate </button></div></div>";
+            $("#carouseleventos").append(html);
         });
+        
+    }
+
+    function agregarTipoIdentificacion(tipoIdentificaciones){ 
+
+        tipoIdentificaciones.forEach(tipos=>{ 
+            let html="<option value="+tipos.tipoIdentificacionID +">"+tipos.tipoIdentificacionTITULO+"</option>";
+            $("#personaTIPOIDENTIFICACION").append(html);
+            
+        });
+        
+
+    }
+    function eventoSeleccionado(eventoID,eventoTITULO){
+        $(".tituloEvento").html(eventoTITULO);
+        $("#eventoID").val(eventoID);
     }
 
 </script>
