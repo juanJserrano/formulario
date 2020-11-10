@@ -202,9 +202,6 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    body{
-        overflow-x: hidden;
-    }
    .carousel{
         margin-top:6%;
         position:relative;
@@ -344,16 +341,16 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
         <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
             <a class=\"navbar-brand\" href=\"/\">
                 ";
-        // line 261
+        // line 258
         $this->displayBlock('logo', $context, $blocks);
-        // line 262
+        // line 259
         echo "            </a>
             <div class=\"collapse navbar-collapse\" id=\"navbarsAplicacionCCSM\">
                 <ul class=\"navbar-nav mr-auto\">
                     ";
-        // line 265
+        // line 262
         $this->displayBlock('menu', $context, $blocks);
-        // line 266
+        // line 263
         echo "                </ul>
             </div>
         </nav>
@@ -362,19 +359,19 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
 
         <main role=\"main\">
             ";
-        // line 273
+        // line 270
         $this->displayBlock('contenido', $context, $blocks);
-        // line 274
+        // line 271
         echo "        </main>
          <footer class=\"text-muted text-center text-small footer \">
             <p class=\"mb-1\">Cámara de Comercio de Santa Marta para el Magdalena &copy; ";
-        // line 276
+        // line 273
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
         echo "</p>
             ";
-        // line 277
+        // line 274
         $this->displayBlock('piecera', $context, $blocks);
-        // line 278
+        // line 275
         echo "        </footer> 
 
         <div class = \"loader no-print\" style = \"position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; background-color: rgba(0,0,0,0.7);\" >
@@ -401,7 +398,7 @@ class __TwigTemplate_77e8ef821621497a7984c98edf6f8791b6f22ba977379c0d05d7fb8523a
       
     
         ";
-        // line 303
+        // line 300
         $this->displayBlock('js', $context, $blocks);
         echo " 
     
@@ -439,31 +436,31 @@ gtag('config', 'G-ZBTLK22S7Q');
         $macros = $this->macros;
     }
 
-    // line 261
+    // line 258
     public function block_logo($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 265
+    // line 262
     public function block_menu($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 273
+    // line 270
     public function block_contenido($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 277
+    // line 274
     public function block_piecera($context, array $blocks = [])
     {
         $macros = $this->macros;
     }
 
-    // line 303
+    // line 300
     public function block_js($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -481,7 +478,7 @@ gtag('config', 'G-ZBTLK22S7Q');
 
     public function getDebugInfo()
     {
-        return array (  467 => 303,  461 => 277,  455 => 273,  449 => 265,  443 => 261,  437 => 82,  431 => 39,  405 => 303,  378 => 278,  376 => 277,  372 => 276,  368 => 274,  366 => 273,  357 => 266,  355 => 265,  350 => 262,  348 => 261,  168 => 83,  166 => 82,  139 => 58,  135 => 57,  131 => 56,  127 => 55,  120 => 51,  116 => 50,  112 => 49,  108 => 48,  99 => 42,  95 => 41,  91 => 40,  84 => 39,  44 => 1,);
+        return array (  464 => 300,  458 => 274,  452 => 270,  446 => 262,  440 => 258,  434 => 82,  428 => 39,  402 => 300,  375 => 275,  373 => 274,  369 => 273,  365 => 271,  363 => 270,  354 => 263,  352 => 262,  347 => 259,  345 => 258,  168 => 83,  166 => 82,  139 => 58,  135 => 57,  131 => 56,  127 => 55,  120 => 51,  116 => 50,  112 => 49,  108 => 48,  99 => 42,  95 => 41,  91 => 40,  84 => 39,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -604,9 +601,6 @@ gtag('config', 'G-ZBTLK22S7Q');
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-    }
-    body{
-        overflow-x: hidden;
     }
    .carousel{
         margin-top:6%;

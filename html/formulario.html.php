@@ -7,7 +7,7 @@
         
             <!-- Elemento del carousel -->
                     <div class="carousel__lista" id="carouseleventos">
-                       
+                        
                     </div>
             <!-- boton anterior -->
                             <button aria-label="Anterior" class="carousel__anterior" id="glider">
@@ -115,40 +115,7 @@
         
 
         
-    new Glider(document.querySelector('.carousel__lista'), {
-    slidesToShow: 1,
-    slidesToScroll:1,
-    resizeLock:true,
-    scrollLock: true,
-    rewind:true,
-    draggable: true,
-    dots: '.carousel__indicadores',
-    arrows: {
-        prev: '.carousel__anterior',
-        next: '.carousel__siguiente'
-    },
-    responsive: [
-        {
-        // screens greater than >= 775px
-        breakpoint: 409,
-        settings: {
-            // Set to `auto` and provide item width to adjust to viewport
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        }
-        },{
-        // screens greater than >= 1024px
-        breakpoint: 768,
-        settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-        
-        }
-        }
-    ]
     
-    
-    });
 
     $("#enviarInscripcion").click(function(){
         console.log($("#formularioInscripcion").serialize());
@@ -191,6 +158,41 @@
             html += " <p>"+evento.eventoTITULO +"</p>";
             html += "<button class='btn btn-primary registro' onClick='eventoSeleccionado("+evento.eventoID+",\""+evento.eventoTITULO+"\")' data-toggle='modal' data-target='#staticBackdrop'>Registrate </button></div></div>";
             $("#carouseleventos").append(html);
+        });
+
+        new Glider(document.querySelector('.carousel__lista'), {
+        slidesToShow: 1,
+        slidesToScroll:1,
+        resizeLock:true,
+        scrollLock: true,
+        rewind:true,
+        draggable: true,
+        dots: '.carousel__indicadores',
+        arrows: {
+            prev: '.carousel__anterior',
+            next: '.carousel__siguiente'
+        },
+        responsive: [
+            {
+            // panatalla sea mayor >=409
+            breakpoint: 409,
+            settings: {
+                // Set to `auto` and provide item width to adjust to viewport
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+            },{
+            // pantalla se mayor >=768
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            
+            }
+            }
+        ]
+        
+        
         });
         
     }
